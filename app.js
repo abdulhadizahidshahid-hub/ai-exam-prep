@@ -914,3 +914,127 @@ function renderDigitalBookContent(chapter){
     </div>
   `;
 }
+
+// ONLINE_AI_RENDER_FIX_V1
+(function(){
+  try{
+    const cfg = JSON.parse(localStorage.getItem("examPrepAiConfig") || "{}");
+    if(!cfg.provider || cfg.provider === "ollama"){
+      cfg.provider = "server";
+      cfg.model = "gpt-4o-mini";
+      cfg.apiUrl = "/api/ask";
+      localStorage.setItem("examPrepAiConfig", JSON.stringify(cfg));
+    }
+  }catch(e){}
+
+  const oldFetch = window.fetch.bind(window);
+
+  window.fetch = function(input, init){
+    const url = typeof input === "string" ? input : (input && input.url ? input.url : "");
+
+    if(url.includes("localhost:11434") || url.includes("127.0.0.1:11434") || url.includes("/api/generate")){
+      let body = {};
+      try{ body = JSON.parse((init && init.body) || "{}"); }catch(e){}
+
+      const question = body.prompt || body.question || body.message || "";
+      const context = document.querySelector(".digital-book-text")?.innerText || document.querySelector(".content-card")?.innerText || "";
+
+      return oldFetch("/api/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          question,
+          context,
+          aiConfig: { provider: "server", model: "gpt-4o-mini" }
+        })
+      }).then(function(r){
+        return r.json();
+      }).then(function(data){
+        const answer = data.answer || data.response || "AI Tutor connected.";
+        return new Response(JSON.stringify({ response: answer, answer: answer }), {
+          status: 200,
+          headers: { "Content-Type": "application/json" }
+        });
+      });
+    }
+
+    return oldFetch(input, init);
+  };
+})();
+
+
+// AI_FORCE_RENDER_BACKEND_V2
+(function(){
+  function forceConfig(){
+    const cfg = {
+      provider: "server",
+      apiUrl: "/api/ask",
+      model: "gpt-4o-mini",
+      apiKey: ""
+    };
+    localStorage.setItem("examPrepAiConfig", JSON.stringify(cfg));
+    return cfg;
+  }
+
+  forceConfig();
+
+  window.getAiConfig = function(){
+    return forceConfig();
+  };
+
+  const originalFetch = window.fetch.bind(window);
+
+  window.fetch = function(input, init){
+    const url = typeof input === "string" ? input : (input && input.url ? input.url : "");
+
+    const looksLikeAi =
+      url.includes("localhost:11434") ||
+      url.includes("127.0.0.1:11434") ||
+      url.includes("/api/generate") ||
+      url.includes("/api/ask") ||
+      url.includes("openai.com");
+
+    if(looksLikeAi){
+      let oldBody = {};
+      try { oldBody = JSON.parse((init && init.body) || "{}"); } catch(e){}
+
+      let question =
+        oldBody.question ||
+        oldBody.message ||
+        oldBody.prompt ||
+        oldBody.q ||
+        "";
+
+      if(!question && Array.isArray(oldBody.messages)){
+        question = oldBody.messages.map(m => m.content || "").join("\n");
+      }
+
+      const context =
+        document.querySelector(".digital-book-text")?.innerText ||
+        document.querySelector(".content-card")?.innerText ||
+        document.querySelector("main")?.innerText ||
+        "";
+
+      return originalFetch("/api/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          question: question || "Explain this topic simply",
+          context,
+          aiConfig: forceConfig()
+        })
+      }).then(r => r.json()).then(data => {
+        const answer = data.answer || data.response || "AI Tutor connected.";
+        return new Response(JSON.stringify({
+          answer,
+          response: answer
+        }), {
+          status: 200,
+          headers: { "Content-Type": "application/json" }
+        });
+      });
+    }
+
+    return originalFetch(input, init);
+  };
+})();
