@@ -1955,3 +1955,214 @@ function renderPhysicsPdfContentClean(chapter){
     </div>
   `;
 }
+
+// PHYSICS_PDF_FINAL_OVERRIDE_V9
+(function(){
+  const PDF_PHYSICS_CHAPTERS = [
+    { title:"Chapter 1: Heat Capacity and Modes of Heat Transfer", topics:["Specific Heat Capacity","Transfer of Heat","Applications of Heat Transfer","Greenhouse Effect and Global Warming","Flow of Heat in Geothermal Activities"] },
+    { title:"Chapter 2: Thermal Expansion and Change of State", topics:["Kinetic Theory of Matter","Thermal Expansion","Evaporation","Latent Heat","Pressure Exerted by Gas Particles","Superconductivity"] },
+    { title:"Chapter 3: Waves", topics:["Wave Motion","Wave Propagation","Characteristic Wave Parameters","Waves and their Types","Types of Waves On the Basis of Medium","Types of Waves On the Basis of Propagation","Wave Characteristics","Properties of Waves","Tsunamis"] },
+    { title:"Chapter 4: Sound", topics:["Source of Sound","Nature of Sound Waves","Ultrasound","Infrasound","Characteristics of Sound Waves","Analysing Sound Waves","Speed of Sound","Noise","Reflection, Refraction and Diffraction of Sound Waves","Echo","Acoustics","Human Hearing System"] },
+    { title:"Chapter 5: Optics", topics:["Reflection of Light","Refraction of Light","Total Internal Reflection","Thin Lenses","Application of Lenses","Visible Spectrum","Human Eye and Colour Perception","Gravitational Lensing","Acoustic Lenses"] },
+    { title:"Chapter 6: Electrostatics", topics:["Static Charge","Conductors and Insulators","Charging and Discharging","Electroscope","Electric Field","Applications of Electrostatics","Electrical Breakdown"] },
+    { title:"Chapter 7: Current Electricity", topics:["Electric Current","Alternating and Direct Current","Potential Difference","EMF","Ohm's Law","Resistance","Resistivity","Electrical Measuring Instruments","Experiment for Demonstration of Resistance"] },
+    { title:"Chapter 8: Electric Circuits", topics:["Circuit Elements and Diagram","Resistors","Types of Resistors","Combination of Resistors","Combination of EMF Sources","Electricity and Its Uses","Electrical Energy","Electric Power","Household Circuits and Electric Safety"] },
+    { title:"Chapter 9: Electronics", topics:["Semiconductors","N and P Type Semiconductors","PN Junction","Characteristics of Diode Under Biasing","Light Emitting Diode","Transistor","Relays and Switching Circuits","Transistor as a Switch","Digital Electronics","Fundamental Logic Gates","Universal Logic Gates","Uses of Logic Gates","Analogue and Digital Electronics","Quantum Computers"] },
+    { title:"Chapter 10: Electromagnetism", topics:["Magnetic Field Due to Current Carrying Wire","Magnetic Field Due to Current Carrying Solenoid","Earth's Magnetic Field","Application of Magnetic Effect of Current","Force On a Current Carrying Conductor Place in a Magnetic Field","Current Carrying Coil in a Magnetic Field","Electric Motor","Electromagnetic Induction","Lenz's Law","Electric Generator","Transformer","Deflection of Electron Beam","Cathode Ray Oscilloscope"] },
+    { title:"Chapter 11: Electromagnetic Waves", topics:["Electromagnetic Spectrum","Applications of Electromagnetic Waves","Risks Associated with Electromagnetic Waves","Scattering of Light","Nature of Light"] },
+    { title:"Chapter 12: Nuclear Physics", topics:["Discovery of Nucleus","Nuclear Representations","Isotopes and Radioisotopes","Radioactivity","Nuclear Decay","Half-Life","Ionizing Nuclear Radiations","Applications of Radiation","Background Radiation","Nuclear Fission","Nuclear Fusion","Dark Matter","Falsifiability"] }
+  ];
+
+  const PDF_PHYSICS_CONTENT = {
+    "Specific Heat Capacity":"Specific heat capacity is the heat required to raise the temperature of 1 kg of a substance by 1 K or 1°C. Formula: c = Q / mΔT. Water has high specific heat capacity, so it heats and cools slowly.",
+    "Transfer of Heat":"Heat transfers from a hotter body to a colder body until thermal equilibrium is reached. The three methods are conduction, convection, and radiation.",
+    "Applications of Heat Transfer":"Heat transfer is used in cooking, radiators, heat exchangers, cooling systems, thermos flasks, insulation, ventilation, and sea breezes.",
+    "Greenhouse Effect and Global Warming":"Greenhouse gases trap infrared radiation from Earth. This is greenhouse effect. Too much greenhouse gas causes global warming and climate change.",
+    "Flow of Heat in Geothermal Activities":"Geothermal heat comes from inside Earth. Heat moves through rocks and molten material and can cause hot springs, geysers, volcanoes, and geothermal energy.",
+
+    "Kinetic Theory of Matter":"Matter is made of tiny particles that are always moving. Heating increases the kinetic energy of particles.",
+    "Thermal Expansion":"Thermal expansion is increase in size of matter when heated. It is important in bridges, railway tracks, wires, and pipes.",
+    "Evaporation":"Evaporation is conversion of liquid into vapour from the surface at any temperature. It causes cooling.",
+    "Latent Heat":"Latent heat is heat absorbed or released during change of state without change in temperature. Formula: Q = mL.",
+    "Pressure Exerted by Gas Particles":"Gas pressure is caused by collisions of gas particles with the walls of a container.",
+    "Superconductivity":"Superconductivity is a state where electrical resistance becomes almost zero below a critical temperature.",
+
+    "Wave Motion":"Wave motion transfers energy from one place to another without permanent transfer of matter.",
+    "Wave Propagation":"Wave propagation means movement of a wave through a medium or space.",
+    "Characteristic Wave Parameters":"Important wave parameters are amplitude, wavelength, frequency, time period, and speed. Formula: v = fλ.",
+    "Waves and their Types":"Waves can be mechanical or electromagnetic. They can also be transverse or longitudinal.",
+    "Types of Waves On the Basis of Medium":"Mechanical waves need a medium. Electromagnetic waves can travel through vacuum.",
+    "Types of Waves On the Basis of Propagation":"Transverse waves vibrate perpendicular to wave direction. Longitudinal waves vibrate parallel to wave direction.",
+    "Wave Characteristics":"Waves show reflection, refraction, diffraction, and interference.",
+    "Properties of Waves":"Wave properties include speed, frequency, wavelength, amplitude, reflection, refraction, and diffraction.",
+    "Tsunamis":"Tsunamis are huge sea waves caused by underwater earthquakes, volcanic eruptions, or landslides.",
+
+    "Source of Sound":"Sound is produced by vibrating bodies.",
+    "Nature of Sound Waves":"Sound is a mechanical longitudinal wave that travels by compressions and rarefactions.",
+    "Ultrasound":"Ultrasound has frequency above human hearing range and is used in medical imaging, cleaning, and flaw detection.",
+    "Infrasound":"Infrasound has frequency below human hearing range and is produced by earthquakes, volcanoes, and storms.",
+    "Characteristics of Sound Waves":"Pitch depends on frequency, loudness depends on amplitude, and quality distinguishes different sounds.",
+    "Analysing Sound Waves":"Sound waves can be analysed using waveforms showing amplitude, frequency, and wavelength.",
+    "Speed of Sound":"Sound travels fastest in solids, slower in liquids, and slowest in gases.",
+    "Noise":"Noise is unwanted sound that can cause stress and hearing damage.",
+    "Reflection, Refraction and Diffraction of Sound Waves":"Sound can reflect, refract, and diffract. Reflection produces echo.",
+    "Echo":"Echo is reflected sound heard after a delay.",
+    "Acoustics":"Acoustics is the study of sound in rooms, halls, and buildings.",
+    "Human Hearing System":"The ear collects sound and converts it into nerve signals interpreted by the brain.",
+
+    "Reflection of Light":"Reflection is bouncing back of light from a surface. Angle of incidence equals angle of reflection.",
+    "Refraction of Light":"Refraction is bending of light when it passes from one medium to another.",
+    "Total Internal Reflection":"Total internal reflection occurs when light reflects completely inside a denser medium.",
+    "Thin Lenses":"Thin lenses form images by refraction. Convex lenses converge light and concave lenses diverge light.",
+    "Application of Lenses":"Lenses are used in cameras, spectacles, microscopes, telescopes, and projectors.",
+    "Visible Spectrum":"Visible spectrum is the part of electromagnetic spectrum visible to the human eye.",
+    "Human Eye and Colour Perception":"The eye focuses light on the retina. Rods help in dim light and cones detect colour.",
+    "Gravitational Lensing":"Gravitational lensing is bending of light due to gravity of massive objects.",
+    "Acoustic Lenses":"Acoustic lenses focus sound waves and are used in ultrasound.",
+
+    "Static Charge":"Static charge is electric charge at rest on an object.",
+    "Conductors and Insulators":"Conductors allow charges to move easily. Insulators resist charge movement.",
+    "Charging and Discharging":"Charging means gaining or losing charge. Discharging is sudden movement of charge.",
+    "Electroscope":"An electroscope detects electric charge.",
+    "Electric Field":"Electric field is a region where a charge experiences force. Formula: E = F/q.",
+    "Applications of Electrostatics":"Electrostatics is used in photocopiers, printers, spray painting, and air purifiers.",
+    "Electrical Breakdown":"Electrical breakdown occurs when an insulator becomes conducting due to high voltage.",
+
+    "Electric Current":"Electric current is rate of flow of charge. Formula: I = Q/t.",
+    "Alternating and Direct Current":"Direct current flows in one direction. Alternating current changes direction repeatedly.",
+    "Potential Difference":"Potential difference is work done per unit charge.",
+    "EMF":"EMF is energy supplied per unit charge by a source.",
+    "Ohm's Law":"Ohm's law states current is directly proportional to voltage if temperature remains constant. Formula: V = IR.",
+    "Resistance":"Resistance opposes current flow.",
+    "Resistivity":"Resistivity is a material property. Formula: R = ρL/A.",
+    "Electrical Measuring Instruments":"Ammeter measures current. Voltmeter measures potential difference.",
+    "Experiment for Demonstration of Resistance":"Resistance can be demonstrated by changing wire length, thickness, or material.",
+
+    "Circuit Elements and Diagram":"Circuit diagrams use symbols for cells, switches, resistors, lamps, ammeters, voltmeters, and wires.",
+    "Resistors":"A resistor limits current in a circuit.",
+    "Types of Resistors":"Resistors may be fixed, variable, thermistors, or light dependent resistors.",
+    "Combination of Resistors":"In series, resistances add directly. In parallel, reciprocal of total resistance equals sum of reciprocals.",
+    "Combination of EMF Sources":"Cells can be connected in series to increase voltage or in parallel for longer supply.",
+    "Electricity and Its Uses":"Electricity is used for lighting, heating, communication, transport, machines, and electronics.",
+    "Electrical Energy":"Electrical energy depends on power and time. Formula: E = Pt.",
+    "Electric Power":"Electric power is rate of using electrical energy. Formula: P = VI.",
+    "Household Circuits and Electric Safety":"Household safety uses fuses, circuit breakers, earthing, insulation, and proper wiring.",
+
+    "Semiconductors":"Semiconductors have conductivity between conductors and insulators.",
+    "N and P Type Semiconductors":"N-type has electrons as majority carriers. P-type has holes as majority carriers.",
+    "PN Junction":"PN junction is formed by joining P-type and N-type semiconductors.",
+    "Characteristics of Diode Under Biasing":"Forward bias allows current. Reverse bias blocks current except small leakage current.",
+    "Light Emitting Diode":"LED emits light when forward biased.",
+    "Transistor":"A transistor is used as an amplifier or switch.",
+    "Relays and Switching Circuits":"A relay is an electrically operated switch.",
+    "Transistor as a Switch":"A transistor can turn a circuit ON or OFF.",
+    "Digital Electronics":"Digital electronics uses binary values 0 and 1.",
+    "Fundamental Logic Gates":"Basic logic gates are AND, OR, and NOT.",
+    "Universal Logic Gates":"NAND and NOR are universal gates.",
+    "Uses of Logic Gates":"Logic gates are used in computers, calculators, alarms, and control systems.",
+    "Analogue and Digital Electronics":"Analogue signals vary continuously. Digital signals have discrete levels.",
+    "Quantum Computers":"Quantum computers use qubits and are advanced computing systems.",
+
+    "Magnetic Field Due to Current Carrying Wire":"A current-carrying wire produces a magnetic field around it.",
+    "Magnetic Field Due to Current Carrying Solenoid":"A current-carrying solenoid behaves like a bar magnet.",
+    "Earth's Magnetic Field":"Earth behaves like a giant magnet.",
+    "Application of Magnetic Effect of Current":"Magnetic effect of current is used in electromagnets, bells, relays, speakers, and motors.",
+    "Force On a Current Carrying Conductor Place in a Magnetic Field":"A current-carrying conductor in a magnetic field experiences force. Formula: F = BIL.",
+    "Current Carrying Coil in a Magnetic Field":"A current-carrying coil in a magnetic field experiences turning effect.",
+    "Electric Motor":"An electric motor converts electrical energy into mechanical energy.",
+    "Electromagnetic Induction":"Electromagnetic induction is production of EMF due to changing magnetic field.",
+    "Lenz's Law":"Lenz's law states that induced current opposes the change that produces it.",
+    "Electric Generator":"A generator converts mechanical energy into electrical energy.",
+    "Transformer":"A transformer changes AC voltage level. Formula: Vp/Vs = Np/Ns.",
+    "Deflection of Electron Beam":"Electron beam can be deflected by electric or magnetic fields.",
+    "Cathode Ray Oscilloscope":"CRO displays electrical signals as waveforms.",
+
+    "Electromagnetic Spectrum":"Electromagnetic spectrum includes radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, and gamma rays.",
+    "Applications of Electromagnetic Waves":"Electromagnetic waves are used in communication, cooking, remote controls, imaging, and treatment.",
+    "Risks Associated with Electromagnetic Waves":"High-energy electromagnetic waves can damage living tissues.",
+    "Scattering of Light":"Scattering is spreading of light in different directions by particles. Blue light scatters more, making the sky appear blue.",
+    "Nature of Light":"Light shows both wave and particle nature.",
+
+    "Discovery of Nucleus":"Rutherford's experiment showed atom has a small dense positive nucleus.",
+    "Nuclear Representations":"Nuclear notation shows atomic number and mass number.",
+    "Isotopes and Radioisotopes":"Isotopes have same atomic number but different mass number. Radioisotopes are unstable isotopes.",
+    "Radioactivity":"Radioactivity is spontaneous emission of radiation from unstable nuclei.",
+    "Nuclear Decay":"Nuclear decay changes an unstable nucleus into a more stable form.",
+    "Half-Life":"Half-life is time taken for half of radioactive nuclei to decay.",
+    "Ionizing Nuclear Radiations":"Ionizing radiation can remove electrons from atoms and damage living tissue.",
+    "Applications of Radiation":"Radiation is used in medicine, sterilization, imaging, agriculture, and industry.",
+    "Background Radiation":"Background radiation is natural radiation around us.",
+    "Nuclear Fission":"Nuclear fission is splitting of a heavy nucleus into smaller nuclei with energy release.",
+    "Nuclear Fusion":"Nuclear fusion is joining of light nuclei into a heavier nucleus with huge energy release.",
+    "Dark Matter":"Dark matter does not emit light but has gravitational effects.",
+    "Falsifiability":"Falsifiability means a scientific idea can be tested and potentially proven wrong."
+  };
+
+  function applyPdfPhysics(){
+    try{
+      DATA.subjects = DATA.subjects.map(s => s.id === "physics" ? { id:"physics", title:"Physics", icon:"⚡", active:true } : s);
+      if(!DATA.subjects.some(s => s.id === "physics")){
+        DATA.subjects.push({ id:"physics", title:"Physics", icon:"⚡", active:true });
+      }
+      DATA.chapters.physics = PDF_PHYSICS_CHAPTERS.map(c => ({ title:c.title, topics:c.topics }));
+    }catch(e){}
+  }
+
+  function renderPdfPhysics(chapter){
+    const realChapter = PDF_PHYSICS_CHAPTERS.find(c => c.title === chapter.title) || PDF_PHYSICS_CHAPTERS[0];
+    const topic = state.selectedTopic || realChapter.topics[0];
+    const text = PDF_PHYSICS_CONTENT[topic] || "This topic is from the Grade 10 Physics textbook.";
+
+    return `
+      <div class="digital-book-area">
+        <div class="digital-book-head">
+          <strong>Physics Digital Book</strong>
+          <span>${realChapter.title}</span>
+        </div>
+        <article class="digital-book-text">
+          <h2>${realChapter.title}</h2>
+          <h3>${topic}</h3>
+          <p>${text}</p>
+          <h3>Important Points</h3>
+          <ul>
+            <li>Learn the definition of ${topic}.</li>
+            <li>Understand the concept in simple words.</li>
+            <li>Revise formulas, examples, diagrams, and applications.</li>
+            <li>Practice short questions and MCQs.</li>
+          </ul>
+          <h3>Exam Questions</h3>
+          <ol>
+            <li>Define ${topic}.</li>
+            <li>Explain ${topic} with an example.</li>
+            <li>Write two important points about ${topic}.</li>
+            <li>Write the related formula if applicable.</li>
+          </ol>
+        </article>
+      </div>
+    `;
+  }
+
+  applyPdfPhysics();
+
+  const previousRenderDigitalBookContentV9 = renderDigitalBookContent;
+  renderDigitalBookContent = function(chapter){
+    if(state.selectedSubject === "physics" && chapter){
+      return renderPdfPhysics(chapter);
+    }
+    return previousRenderDigitalBookContentV9 ? previousRenderDigitalBookContentV9(chapter) : "";
+  };
+
+  setTimeout(function(){
+    applyPdfPhysics();
+    try{
+      if(state.selectedSubject === "physics"){
+        state.selectedChapter = 0;
+        state.selectedTopic = PDF_PHYSICS_CHAPTERS[0].topics[0];
+      }
+    }catch(e){}
+    try{ if(typeof renderApp === "function") renderApp(); }catch(e){}
+    try{ if(typeof render === "function") render(); }catch(e){}
+  }, 300);
+
+  window.PDF_PHYSICS_CHAPTERS = PDF_PHYSICS_CHAPTERS;
+})();
