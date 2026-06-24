@@ -2833,3 +2833,2132 @@ function renderPhysicsPdfContentClean(chapter){
 
   window.PHYSICS_CH3_CONTENT = PHYSICS_CH3_CONTENT;
 })();
+
+// PHYSICS_CHAPTER_4_5_FLOW_CONTENT_V1
+(function(){
+  const PHYSICS_CH4_CONTENT = {
+    "Source of Sound": `
+      <h2>Chapter 4: Sound</h2>
+      <h3>Source of Sound</h3>
+
+      <p>Sound is produced when an object vibrates. A vibrating object makes the particles of the surrounding medium vibrate, and these vibrations travel as sound waves.</p>
+
+      <p>For example, when a tuning fork is struck, its prongs vibrate and produce sound. When a drum is beaten, its membrane vibrates. When we speak, our vocal cords vibrate and produce sound.</p>
+
+      <h3>Important Examples</h3>
+      <ul>
+        <li>Vocal cords produce sound by vibration.</li>
+        <li>Speakers produce sound by vibrating their cone.</li>
+        <li>Musical instruments produce sound by vibrating strings, air columns, or membranes.</li>
+        <li>A bell produces sound because its metal body vibrates.</li>
+      </ul>
+
+      <p>If vibration stops, sound also stops. So vibration is the basic source of sound.</p>
+    `,
+
+    "Nature of Sound Waves": `
+      <h2>Chapter 4: Sound</h2>
+      <h3>Nature of Sound Waves</h3>
+
+      <p>Sound is a mechanical wave, which means it needs a material medium to travel. Sound cannot travel through vacuum because there are no particles to transfer vibrations.</p>
+
+      <p>Sound waves are longitudinal waves. In a longitudinal wave, particles of the medium vibrate parallel to the direction of wave motion.</p>
+
+      <h3>Compressions and Rarefactions</h3>
+      <p>When sound travels through air, it creates regions where air particles are close together and regions where particles are spread apart.</p>
+
+      <ul>
+        <li><b>Compression:</b> Region of high pressure where particles are close together.</li>
+        <li><b>Rarefaction:</b> Region of low pressure where particles are far apart.</li>
+      </ul>
+
+      <p>Sound travels by the continuous formation of compressions and rarefactions in the medium.</p>
+    `,
+
+    "Ultrasound": `
+      <h2>Chapter 4: Sound</h2>
+      <h3>Ultrasound</h3>
+
+      <p>Ultrasound is sound with frequency greater than the upper limit of human hearing. Humans normally cannot hear frequencies above about 20,000 Hz.</p>
+
+      <p>Although we cannot hear ultrasound, it is very useful in science, medicine, and technology.</p>
+
+      <h3>Uses of Ultrasound</h3>
+      <ul>
+        <li><b>Medical imaging:</b> Ultrasound is used to see inside the human body.</li>
+        <li><b>Pregnancy scans:</b> It is used to observe the growth of a baby before birth.</li>
+        <li><b>Cleaning:</b> Ultrasound can clean delicate objects such as jewellery and instruments.</li>
+        <li><b>Flaw detection:</b> It can detect cracks inside metal blocks.</li>
+        <li><b>Navigation:</b> Bats and dolphins use ultrasound for locating objects.</li>
+      </ul>
+
+      <p>Ultrasound is useful because it can travel through materials and reflect from boundaries.</p>
+    `,
+
+    "Infrasound": `
+      <h2>Chapter 4: Sound</h2>
+      <h3>Infrasound</h3>
+
+      <p>Infrasound is sound with frequency lower than the lower limit of human hearing. Humans normally cannot hear frequencies below about 20 Hz.</p>
+
+      <p>Infrasound is produced by many natural events and some large machines. Even though we cannot hear it, it can travel long distances.</p>
+
+      <h3>Sources of Infrasound</h3>
+      <ul>
+        <li>Earthquakes</li>
+        <li>Volcanic eruptions</li>
+        <li>Ocean waves</li>
+        <li>Storms and thunder</li>
+        <li>Large animals such as elephants</li>
+      </ul>
+
+      <h3>Uses</h3>
+      <p>Infrasound can be used for monitoring earthquakes, volcanoes, storms, and explosions. Some animals use infrasound for long-distance communication.</p>
+    `,
+
+    "Characteristics of Sound Waves": `
+      <h2>Chapter 4: Sound</h2>
+      <h3>Characteristics of Sound Waves</h3>
+
+      <p>Sound waves have different characteristics that help us describe and compare sounds. The main characteristics are pitch, loudness, and quality.</p>
+
+      <h3>Pitch</h3>
+      <p>Pitch depends on frequency. A high-frequency sound has a high pitch, while a low-frequency sound has a low pitch.</p>
+
+      <h3>Loudness</h3>
+      <p>Loudness depends on amplitude. A sound with greater amplitude is louder because it carries more energy.</p>
+
+      <h3>Quality</h3>
+      <p>Quality, also called timbre, helps us distinguish between sounds produced by different sources even if they have the same pitch and loudness.</p>
+
+      <h3>Example</h3>
+      <p>A flute and a violin may play the same note, but we can still identify them because their sound quality is different.</p>
+    `,
+
+    "Analysing Sound Waves": `
+      <h2>Chapter 4: Sound</h2>
+      <h3>Analysing Sound Waves</h3>
+
+      <p>Sound waves can be analysed by studying their waveforms. A waveform shows how pressure or displacement changes with time.</p>
+
+      <p>The shape of the waveform gives information about the sound. A larger amplitude means louder sound. More waves per second means higher frequency and higher pitch.</p>
+
+      <h3>Waveform Features</h3>
+      <ul>
+        <li><b>Amplitude:</b> Shows loudness of sound.</li>
+        <li><b>Frequency:</b> Shows pitch of sound.</li>
+        <li><b>Wavelength:</b> Distance between similar points of the wave.</li>
+        <li><b>Time period:</b> Time for one complete vibration.</li>
+      </ul>
+
+      <p>In laboratories, devices such as oscilloscopes can be used to display and analyse sound signals.</p>
+    `,
+
+    "Speed of Sound": `
+      <h2>Chapter 4: Sound</h2>
+      <h3>Speed of Sound</h3>
+
+      <p>The speed of sound is the distance travelled by sound in one second. Sound speed depends on the medium and temperature.</p>
+
+      <div class="formula-box">Speed = Distance / Time</div>
+
+      <p>Sound travels fastest in solids, slower in liquids, and slowest in gases. This is because particles in solids are closer together and transfer vibrations more quickly.</p>
+
+      <h3>Effect of Temperature</h3>
+      <p>In air, the speed of sound increases when temperature increases. At higher temperature, air particles move faster and pass vibrations more quickly.</p>
+
+      <h3>Important Order</h3>
+      <ul>
+        <li>Fastest: solids</li>
+        <li>Medium: liquids</li>
+        <li>Slowest: gases</li>
+      </ul>
+    `,
+
+    "Noise": `
+      <h2>Chapter 4: Sound</h2>
+      <h3>Noise</h3>
+
+      <p>Noise is unwanted, unpleasant, or disturbing sound. Sounds from traffic, machines, loudspeakers, construction work, and factories can become noise if they disturb people.</p>
+
+      <h3>Effects of Noise Pollution</h3>
+      <ul>
+        <li>Headache and stress</li>
+        <li>Loss of concentration</li>
+        <li>Sleep disturbance</li>
+        <li>Hearing problems</li>
+        <li>High blood pressure in severe cases</li>
+      </ul>
+
+      <h3>Control of Noise</h3>
+      <ul>
+        <li>Use silencers in vehicles and machines.</li>
+        <li>Plant trees near roads and buildings.</li>
+        <li>Use soundproof materials in rooms.</li>
+        <li>Avoid unnecessary loudspeakers and horns.</li>
+        <li>Keep factories away from residential areas.</li>
+      </ul>
+    `,
+
+    "Reflection, Refraction and Diffraction of Sound Waves": `
+      <h2>Chapter 4: Sound</h2>
+      <h3>Reflection, Refraction and Diffraction of Sound Waves</h3>
+
+      <p>Sound waves show different behaviours when they meet surfaces, enter different media, or pass around obstacles.</p>
+
+      <h3>Reflection of Sound</h3>
+      <p>Reflection occurs when sound bounces back after striking a hard surface. Echo is an example of reflection of sound.</p>
+
+      <h3>Refraction of Sound</h3>
+      <p>Refraction is the bending of sound waves when they pass through regions where their speed changes. This can happen due to temperature differences in air.</p>
+
+      <h3>Diffraction of Sound</h3>
+      <p>Diffraction is the bending or spreading of sound waves around obstacles and through openings. Because of diffraction, we can hear sound around corners.</p>
+
+      <p>These properties explain many daily life sound effects and are important in designing halls, rooms, and sound systems.</p>
+    `,
+
+    "Echo": `
+      <h2>Chapter 4: Sound</h2>
+      <h3>Echo</h3>
+
+      <p>Echo is the repetition of sound caused by reflection from a distant surface. When sound waves strike a large hard surface, they reflect back and may be heard again.</p>
+
+      <p>For a clear echo, the reflected sound must reach the ear after a small time gap. If the reflecting surface is too close, the reflected sound mixes with the original sound and no separate echo is heard.</p>
+
+      <h3>Uses of Echo</h3>
+      <ul>
+        <li>Measuring distance</li>
+        <li>SONAR systems</li>
+        <li>Depth measurement in oceans</li>
+        <li>Navigation by bats and dolphins</li>
+      </ul>
+
+      <p>Echo is a useful example of reflection of sound.</p>
+    `,
+
+    "Acoustics": `
+      <h2>Chapter 4: Sound</h2>
+      <h3>Acoustics</h3>
+
+      <p>Acoustics is the study of sound and its behaviour in rooms, halls, auditoriums, and other spaces.</p>
+
+      <p>A hall with good acoustics allows sound to be heard clearly by everyone. If there is too much reflection, sound may overlap and become unclear. If there is too much absorption, sound may become weak.</p>
+
+      <h3>Good Acoustic Design</h3>
+      <ul>
+        <li>Use proper shape of walls and ceiling.</li>
+        <li>Use sound absorbing materials where needed.</li>
+        <li>Avoid excessive echo.</li>
+        <li>Use proper speaker placement.</li>
+        <li>Control outside noise.</li>
+      </ul>
+
+      <p>Acoustics is important in classrooms, mosques, cinemas, lecture halls, and concert halls.</p>
+    `,
+
+    "Human Hearing System": `
+      <h2>Chapter 4: Sound</h2>
+      <h3>Human Hearing System</h3>
+
+      <p>The human ear detects sound waves and converts them into nerve signals that are sent to the brain. The brain interprets these signals as sound.</p>
+
+      <h3>Outer Ear</h3>
+      <p>The outer ear collects sound waves and directs them into the ear canal. These waves reach the eardrum.</p>
+
+      <h3>Middle Ear</h3>
+      <p>The eardrum vibrates when sound waves strike it. These vibrations are passed through small bones in the middle ear. These bones amplify the vibrations.</p>
+
+      <h3>Inner Ear</h3>
+      <p>The vibrations reach the cochlea in the inner ear. The cochlea converts vibrations into electrical signals. These signals travel to the brain through the auditory nerve.</p>
+
+      <h3>Important Care</h3>
+      <ul>
+        <li>Avoid very loud sounds.</li>
+        <li>Do not put sharp objects into the ear.</li>
+        <li>Use ear protection in noisy areas.</li>
+      </ul>
+    `
+  };
+
+  const PHYSICS_CH5_CONTENT = {
+    "Reflection of Light": `
+      <h2>Chapter 5: Optics</h2>
+      <h3>Reflection of Light</h3>
+
+      <p>Reflection is the bouncing back of light when it strikes a surface. Smooth and shiny surfaces such as mirrors reflect light clearly.</p>
+
+      <h3>Laws of Reflection</h3>
+      <ul>
+        <li>The incident ray, reflected ray, and normal all lie in the same plane.</li>
+        <li>The angle of incidence is equal to the angle of reflection.</li>
+      </ul>
+
+      <p>The normal is an imaginary line drawn perpendicular to the reflecting surface at the point where the incident ray strikes.</p>
+
+      <h3>Regular and Irregular Reflection</h3>
+      <p>Regular reflection occurs from smooth surfaces and forms clear images. Irregular reflection occurs from rough surfaces and scatters light in different directions.</p>
+
+      <p>Reflection is used in mirrors, periscopes, optical instruments, and many daily life applications.</p>
+    `,
+
+    "Refraction of Light": `
+      <h2>Chapter 5: Optics</h2>
+      <h3>Refraction of Light</h3>
+
+      <p>Refraction is the bending of light when it passes from one transparent medium into another. It happens because the speed of light changes in different media.</p>
+
+      <p>For example, when light travels from air into glass or water, it slows down and bends toward the normal. When it travels from glass or water into air, it speeds up and bends away from the normal.</p>
+
+      <h3>Examples of Refraction</h3>
+      <ul>
+        <li>A pencil appears bent when placed in water.</li>
+        <li>A swimming pool appears shallower than it really is.</li>
+        <li>Lenses form images due to refraction.</li>
+        <li>Atmospheric refraction changes the apparent position of stars.</li>
+      </ul>
+
+      <h3>Refractive Index</h3>
+      <p>Refractive index tells how much a medium slows down light. A higher refractive index means light travels slower in that medium.</p>
+    `,
+
+    "Total Internal Reflection": `
+      <h2>Chapter 5: Optics</h2>
+      <h3>Total Internal Reflection</h3>
+
+      <p>Total internal reflection occurs when light travelling from a denser medium to a rarer medium is completely reflected back into the denser medium.</p>
+
+      <p>This happens only when the angle of incidence is greater than the critical angle.</p>
+
+      <h3>Conditions</h3>
+      <ul>
+        <li>Light must travel from denser medium to rarer medium.</li>
+        <li>The angle of incidence must be greater than the critical angle.</li>
+      </ul>
+
+      <h3>Applications</h3>
+      <ul>
+        <li>Optical fibres</li>
+        <li>Endoscopes used in medicine</li>
+        <li>Prisms in binoculars and periscopes</li>
+        <li>Communication through fibre optic cables</li>
+      </ul>
+
+      <p>Total internal reflection allows light to travel inside optical fibres with very little loss.</p>
+    `,
+
+    "Thin Lenses": `
+      <h2>Chapter 5: Optics</h2>
+      <h3>Thin Lenses</h3>
+
+      <p>A lens is a transparent optical device that bends light by refraction. A thin lens has small thickness compared with its focal length.</p>
+
+      <h3>Types of Lenses</h3>
+      <ul>
+        <li><b>Convex lens:</b> Thicker at the centre and thinner at the edges. It converges light rays.</li>
+        <li><b>Concave lens:</b> Thinner at the centre and thicker at the edges. It diverges light rays.</li>
+      </ul>
+
+      <h3>Important Terms</h3>
+      <ul>
+        <li><b>Principal axis:</b> The main line passing through the centre of the lens.</li>
+        <li><b>Optical centre:</b> The centre point of the lens.</li>
+        <li><b>Focus:</b> Point where parallel rays meet or appear to come from.</li>
+        <li><b>Focal length:</b> Distance between optical centre and focus.</li>
+      </ul>
+
+      <div class="formula-box">1/f = 1/do + 1/di</div>
+
+      <p>This lens formula relates focal length, object distance, and image distance.</p>
+    `,
+
+    "Application of Lenses": `
+      <h2>Chapter 5: Optics</h2>
+      <h3>Application of Lenses</h3>
+
+      <p>Lenses are used in many optical devices because they can form images by bending light.</p>
+
+      <h3>Common Uses</h3>
+      <ul>
+        <li><b>Spectacles:</b> Correct vision defects.</li>
+        <li><b>Camera:</b> Focuses light to form an image on a sensor or film.</li>
+        <li><b>Microscope:</b> Magnifies very small objects.</li>
+        <li><b>Telescope:</b> Helps see distant objects clearly.</li>
+        <li><b>Projector:</b> Produces enlarged images on a screen.</li>
+        <li><b>Magnifying glass:</b> Produces a magnified image of nearby objects.</li>
+      </ul>
+
+      <h3>Vision Correction</h3>
+      <p>Convex and concave lenses are used in spectacles to correct defects such as long-sightedness and short-sightedness.</p>
+    `,
+
+    "Visible Spectrum": `
+      <h2>Chapter 5: Optics</h2>
+      <h3>Visible Spectrum</h3>
+
+      <p>The visible spectrum is the part of the electromagnetic spectrum that can be detected by the human eye.</p>
+
+      <p>White light is made up of different colours. When white light passes through a prism, it splits into colours. This process is called dispersion.</p>
+
+      <h3>Colours of Visible Spectrum</h3>
+      <ul>
+        <li>Violet</li>
+        <li>Indigo</li>
+        <li>Blue</li>
+        <li>Green</li>
+        <li>Yellow</li>
+        <li>Orange</li>
+        <li>Red</li>
+      </ul>
+
+      <p>Violet light has shorter wavelength and higher frequency than red light. Red light has longer wavelength and lower frequency.</p>
+    `,
+
+    "Human Eye and Colour Perception": `
+      <h2>Chapter 5: Optics</h2>
+      <h3>Human Eye and Colour Perception</h3>
+
+      <p>The human eye is an optical instrument that forms images on the retina. Light enters the eye through the cornea and pupil, and the eye lens focuses the light on the retina.</p>
+
+      <h3>Main Parts</h3>
+      <ul>
+        <li><b>Cornea:</b> Transparent front part that helps focus light.</li>
+        <li><b>Iris:</b> Controls size of pupil.</li>
+        <li><b>Pupil:</b> Opening through which light enters.</li>
+        <li><b>Lens:</b> Focuses light on the retina.</li>
+        <li><b>Retina:</b> Light-sensitive screen inside the eye.</li>
+      </ul>
+
+      <h3>Rods and Cones</h3>
+      <p>Rods help us see in dim light. Cones help us see colours. The brain receives signals from the retina and interprets them as images.</p>
+
+      <p>Colour perception depends on how different cones respond to different wavelengths of light.</p>
+    `,
+
+    "Gravitational Lensing": `
+      <h2>Chapter 5: Optics</h2>
+      <h3>Gravitational Lensing</h3>
+
+      <p>Gravitational lensing is the bending of light due to the gravity of a massive object. According to modern physics, massive objects can curve space around them, and light follows this curved path.</p>
+
+      <p>When light from a distant star or galaxy passes near a massive object, such as another galaxy or black hole, its path bends. This can make the distant object appear shifted, magnified, or distorted.</p>
+
+      <h3>Importance</h3>
+      <ul>
+        <li>It helps astronomers study distant galaxies.</li>
+        <li>It provides evidence that gravity affects light.</li>
+        <li>It can help detect dark matter.</li>
+      </ul>
+
+      <p>Gravitational lensing is an advanced application of the behaviour of light.</p>
+    `,
+
+    "Acoustic Lenses": `
+      <h2>Chapter 5: Optics</h2>
+      <h3>Acoustic Lenses</h3>
+
+      <p>An acoustic lens is a device that focuses sound waves in a way similar to how an optical lens focuses light waves.</p>
+
+      <p>Sound waves can be controlled, focused, and directed using materials and shapes that change the path of sound.</p>
+
+      <h3>Uses</h3>
+      <ul>
+        <li>Medical ultrasound imaging</li>
+        <li>Sound focusing devices</li>
+        <li>Underwater sound systems</li>
+        <li>Acoustic research</li>
+      </ul>
+
+      <p>Acoustic lenses show that wave behaviour is not limited to light. Sound waves also show focusing, reflection, refraction, and diffraction.</p>
+    `
+  };
+
+  function renderPhysicsFlowChapter(chapter, contentMap, chapterNumber){
+    const topic = state.selectedTopic || Object.keys(contentMap)[0];
+    const html = contentMap[topic];
+
+    if(!html) return null;
+
+    return `
+      <div class="digital-book-area physics-ch45-flow-area">
+        <div class="digital-book-head">
+          <strong>Physics Digital Book</strong>
+          <span>Chapter ${chapterNumber}</span>
+        </div>
+        <article class="digital-book-text physics-ch45-flow-text">
+          ${html}
+        </article>
+      </div>
+    `;
+  }
+
+  const oldPhysicsRenderCh45Flow = renderDigitalBookContent;
+
+  renderDigitalBookContent = function(chapter){
+    if(state.selectedSubject === "physics" && chapter && chapter.title === "Chapter 4: Sound"){
+      const rendered = renderPhysicsFlowChapter(chapter, PHYSICS_CH4_CONTENT, 4);
+      if(rendered) return rendered;
+    }
+
+    if(state.selectedSubject === "physics" && chapter && chapter.title === "Chapter 5: Optics"){
+      const rendered = renderPhysicsFlowChapter(chapter, PHYSICS_CH5_CONTENT, 5);
+      if(rendered) return rendered;
+    }
+
+    return oldPhysicsRenderCh45Flow ? oldPhysicsRenderCh45Flow(chapter) : "";
+  };
+
+  window.PHYSICS_CH4_CONTENT = PHYSICS_CH4_CONTENT;
+  window.PHYSICS_CH5_CONTENT = PHYSICS_CH5_CONTENT;
+})();
+
+// PHYSICS_CHAPTER_6_7_FLOW_CONTENT_V1
+(function(){
+  const PHYSICS_CH6_CONTENT = {
+    "Static Charge": `
+      <h2>Chapter 6: Electrostatics</h2>
+      <h3>Static Charge</h3>
+
+      <p>Electrostatics is the branch of physics that deals with electric charges at rest. A body becomes charged when it gains or loses electrons.</p>
+
+      <p>If a body gains electrons, it becomes negatively charged. If a body loses electrons, it becomes positively charged.</p>
+
+      <h3>Types of Charges</h3>
+      <ul>
+        <li><b>Positive charge:</b> Produced when an object loses electrons.</li>
+        <li><b>Negative charge:</b> Produced when an object gains electrons.</li>
+      </ul>
+
+      <h3>Basic Law of Charges</h3>
+      <p>Like charges repel each other, while unlike charges attract each other.</p>
+
+      <h3>Daily Life Examples</h3>
+      <ul>
+        <li>A plastic comb can attract small pieces of paper after rubbing with dry hair.</li>
+        <li>A balloon rubbed with hair can stick to a wall.</li>
+        <li>Clothes sometimes stick together after coming out of a dryer.</li>
+      </ul>
+    `,
+
+    "Conductors and Insulators": `
+      <h2>Chapter 6: Electrostatics</h2>
+      <h3>Conductors and Insulators</h3>
+
+      <p>Materials can be classified according to how easily electric charges move through them.</p>
+
+      <h3>Conductors</h3>
+      <p>Conductors are materials that allow electric charges to move easily. Metals are good conductors because they have free electrons.</p>
+
+      <h3>Examples of Conductors</h3>
+      <ul>
+        <li>Copper</li>
+        <li>Aluminium</li>
+        <li>Iron</li>
+        <li>Silver</li>
+        <li>Graphite</li>
+      </ul>
+
+      <h3>Insulators</h3>
+      <p>Insulators are materials that do not allow electric charges to move easily. Their electrons are tightly bound to atoms.</p>
+
+      <h3>Examples of Insulators</h3>
+      <ul>
+        <li>Rubber</li>
+        <li>Plastic</li>
+        <li>Glass</li>
+        <li>Wood</li>
+        <li>Dry air</li>
+      </ul>
+
+      <p>Electrical wires are made of metal conductors covered with plastic insulation for safety.</p>
+    `,
+
+    "Charging and Discharging": `
+      <h2>Chapter 6: Electrostatics</h2>
+      <h3>Charging and Discharging</h3>
+
+      <p>Charging means giving electric charge to an object. An object can be charged by friction, contact, or induction.</p>
+
+      <h3>Charging by Friction</h3>
+      <p>When two different materials are rubbed together, electrons may transfer from one material to the other. One object becomes positively charged and the other becomes negatively charged.</p>
+
+      <h3>Charging by Contact</h3>
+      <p>When a charged object touches an uncharged conductor, some charge is transferred to the conductor.</p>
+
+      <h3>Charging by Induction</h3>
+      <p>Charging by induction happens without direct contact. A charged body brought near a conductor causes separation of charges inside the conductor.</p>
+
+      <h3>Discharging</h3>
+      <p>Discharging is the sudden flow of charge from one object to another. Sparks and lightning are examples of electric discharge.</p>
+
+      <p>Lightning occurs when a large charge difference develops between clouds or between a cloud and the ground.</p>
+    `,
+
+    "Electroscope": `
+      <h2>Chapter 6: Electrostatics</h2>
+      <h3>Electroscope</h3>
+
+      <p>An electroscope is a simple device used to detect the presence of electric charge on an object.</p>
+
+      <p>A common type is the gold leaf electroscope. It has a metal cap connected to a metal rod. At the lower end of the rod, two thin metal leaves are attached.</p>
+
+      <h3>Working</h3>
+      <p>When a charged object touches the metal cap, charge spreads through the rod and leaves. Both leaves get the same type of charge, so they repel each other and diverge.</p>
+
+      <h3>Uses</h3>
+      <ul>
+        <li>To detect whether an object is charged.</li>
+        <li>To compare the amount of charge.</li>
+        <li>To test the type of charge by using a known charge.</li>
+      </ul>
+
+      <p>The greater the charge, the more the leaves diverge.</p>
+    `,
+
+    "Electric Field": `
+      <h2>Chapter 6: Electrostatics</h2>
+      <h3>Electric Field</h3>
+
+      <p>An electric field is the region around a charged body where another charge experiences an electric force.</p>
+
+      <div class="formula-box">E = F / q</div>
+
+      <p>Here, <b>E</b> is electric field strength, <b>F</b> is force, and <b>q</b> is the test charge.</p>
+
+      <h3>Direction of Electric Field</h3>
+      <p>The direction of electric field is the direction in which a positive test charge would move.</p>
+
+      <ul>
+        <li>Field lines move away from positive charge.</li>
+        <li>Field lines move toward negative charge.</li>
+        <li>Closer field lines show a stronger electric field.</li>
+      </ul>
+
+      <p>Electric field helps explain attraction, repulsion, charging, lightning, and many electrostatic effects.</p>
+    `,
+
+    "Applications of Electrostatics": `
+      <h2>Chapter 6: Electrostatics</h2>
+      <h3>Applications of Electrostatics</h3>
+
+      <p>Electrostatics is not only a theory. It has many useful applications in daily life, industry, and technology.</p>
+
+      <h3>Photocopiers and Laser Printers</h3>
+      <p>Photocopiers and laser printers use electrostatic charges to attract toner particles to selected areas of paper.</p>
+
+      <h3>Spray Painting</h3>
+      <p>In electrostatic spray painting, paint droplets are charged and attracted to the object being painted. This gives smooth coating and reduces waste.</p>
+
+      <h3>Air Purifiers</h3>
+      <p>Electrostatic air purifiers charge dust and smoke particles and then collect them on oppositely charged plates.</p>
+
+      <h3>Industrial Use</h3>
+      <p>Electrostatics is also used in removing dust from factory smoke, separating materials, and controlling pollution.</p>
+    `,
+
+    "Electrical Breakdown": `
+      <h2>Chapter 6: Electrostatics</h2>
+      <h3>Electrical Breakdown</h3>
+
+      <p>Normally, air is an insulator. But when the electric field becomes very strong, air molecules can become ionized and air starts conducting electricity. This is called electrical breakdown.</p>
+
+      <p>During electrical breakdown, charges move suddenly through air and may produce a spark.</p>
+
+      <h3>Examples</h3>
+      <ul>
+        <li>Lightning during storms</li>
+        <li>Sparks when touching a metal object after walking on a carpet</li>
+        <li>Spark plugs in engines</li>
+        <li>Electrical discharge in high-voltage equipment</li>
+      </ul>
+
+      <h3>Safety</h3>
+      <p>Electrical breakdown can be dangerous in high-voltage systems. Proper insulation, grounding, and safe distance are used to avoid accidents.</p>
+    `
+  };
+
+  const PHYSICS_CH7_CONTENT = {
+    "Electric Current": `
+      <h2>Chapter 7: Current Electricity</h2>
+      <h3>Electric Current</h3>
+
+      <p>Electric current is the rate of flow of electric charge through a conductor. When charges move through a wire, an electric current is produced.</p>
+
+      <div class="formula-box">I = Q / t</div>
+
+      <p>Here, <b>I</b> is current, <b>Q</b> is charge, and <b>t</b> is time. The SI unit of current is ampere, written as <b>A</b>.</p>
+
+      <h3>Direction of Current</h3>
+      <p>Conventional current flows from positive terminal to negative terminal of a battery. Electron flow is opposite to conventional current because electrons are negatively charged.</p>
+
+      <h3>Conditions for Current</h3>
+      <ul>
+        <li>There must be a source of energy, such as a cell or battery.</li>
+        <li>The circuit must be complete.</li>
+        <li>There must be conducting path for charges to move.</li>
+      </ul>
+    `,
+
+    "Alternating and Direct Current": `
+      <h2>Chapter 7: Current Electricity</h2>
+      <h3>Alternating and Direct Current</h3>
+
+      <p>Electric current is of two main types: direct current and alternating current.</p>
+
+      <h3>Direct Current</h3>
+      <p>Direct current, or DC, flows in one direction only. Cells and batteries provide direct current.</p>
+
+      <h3>Alternating Current</h3>
+      <p>Alternating current, or AC, changes its direction again and again with time. Household electricity supply is usually AC.</p>
+
+      <h3>Comparison</h3>
+      <ul>
+        <li>DC flows in one direction; AC changes direction.</li>
+        <li>Batteries give DC; power stations usually supply AC.</li>
+        <li>AC can be transmitted over long distances more easily using transformers.</li>
+      </ul>
+
+      <p>Both AC and DC are useful in different electrical devices.</p>
+    `,
+
+    "Potential Difference": `
+      <h2>Chapter 7: Current Electricity</h2>
+      <h3>Potential Difference</h3>
+
+      <p>Potential difference is the work done in moving unit positive charge from one point to another in an electric circuit.</p>
+
+      <div class="formula-box">V = W / Q</div>
+
+      <p>Here, <b>V</b> is potential difference, <b>W</b> is work done, and <b>Q</b> is charge. The SI unit of potential difference is volt.</p>
+
+      <h3>Voltmeter</h3>
+      <p>A voltmeter is used to measure potential difference. It is connected in parallel with the component across which potential difference is measured.</p>
+
+      <h3>Simple Idea</h3>
+      <p>Potential difference acts like an electrical push that makes charges move through a circuit.</p>
+    `,
+
+    "EMF": `
+      <h2>Chapter 7: Current Electricity</h2>
+      <h3>EMF</h3>
+
+      <p>EMF stands for electromotive force. It is the energy supplied by a source per unit charge to drive charges around a complete circuit.</p>
+
+      <div class="formula-box">EMF = Energy supplied / Charge</div>
+
+      <p>The SI unit of EMF is volt. A cell or battery provides EMF.</p>
+
+      <h3>Difference between EMF and Potential Difference</h3>
+      <p>EMF is related to the total energy supplied by the source, while potential difference is the energy used by charge between two points in a circuit.</p>
+
+      <p>In simple circuits, EMF is the cause that produces current, while potential difference appears across circuit components.</p>
+    `,
+
+    "Ohm's Law": `
+      <h2>Chapter 7: Current Electricity</h2>
+      <h3>Ohm's Law</h3>
+
+      <p>Ohm's law describes the relationship between current and potential difference in a conductor.</p>
+
+      <p>It states that the current passing through a conductor is directly proportional to the potential difference across its ends, provided temperature and other physical conditions remain constant.</p>
+
+      <div class="formula-box">V = IR</div>
+
+      <p>Here, <b>V</b> is voltage, <b>I</b> is current, and <b>R</b> is resistance.</p>
+
+      <h3>Meaning</h3>
+      <p>If resistance is constant, increasing voltage increases current. If resistance increases, current decreases for the same voltage.</p>
+
+      <h3>Graph</h3>
+      <p>For an ohmic conductor, the voltage-current graph is a straight line passing through the origin.</p>
+    `,
+
+    "Resistance": `
+      <h2>Chapter 7: Current Electricity</h2>
+      <h3>Resistance</h3>
+
+      <p>Resistance is the opposition offered by a conductor to the flow of electric current. It is measured in ohms, represented by the symbol Ω.</p>
+
+      <div class="formula-box">R = V / I</div>
+
+      <h3>Factors Affecting Resistance</h3>
+      <ul>
+        <li><b>Length:</b> Longer wire has greater resistance.</li>
+        <li><b>Area:</b> Thicker wire has smaller resistance.</li>
+        <li><b>Material:</b> Different materials have different resistance.</li>
+        <li><b>Temperature:</b> Resistance of metals usually increases with temperature.</li>
+      </ul>
+
+      <p>Resistance is useful because it helps control current in circuits.</p>
+    `,
+
+    "Resistivity": `
+      <h2>Chapter 7: Current Electricity</h2>
+      <h3>Resistivity</h3>
+
+      <p>Resistivity is a property of a material that tells how strongly it opposes electric current. It does not depend on the size or shape of the conductor, but it depends on the material.</p>
+
+      <div class="formula-box">R = ρL / A</div>
+
+      <p>Here, <b>R</b> is resistance, <b>ρ</b> is resistivity, <b>L</b> is length, and <b>A</b> is cross-sectional area.</p>
+
+      <h3>Low and High Resistivity</h3>
+      <ul>
+        <li>Good conductors such as copper have low resistivity.</li>
+        <li>Insulators such as rubber have high resistivity.</li>
+        <li>Materials used in heating elements have relatively high resistivity.</li>
+      </ul>
+
+      <p>Resistivity helps us choose proper materials for wires, heaters, and insulators.</p>
+    `,
+
+    "Electrical Measuring Instruments": `
+      <h2>Chapter 7: Current Electricity</h2>
+      <h3>Electrical Measuring Instruments</h3>
+
+      <p>Electrical measuring instruments are used to measure current, voltage, resistance, and other electrical quantities.</p>
+
+      <h3>Ammeter</h3>
+      <p>An ammeter measures electric current. It is connected in series with the circuit component.</p>
+
+      <h3>Voltmeter</h3>
+      <p>A voltmeter measures potential difference. It is connected in parallel with the component.</p>
+
+      <h3>Galvanometer</h3>
+      <p>A galvanometer detects small currents. It can be converted into an ammeter or voltmeter by using suitable resistors.</p>
+
+      <h3>Multimeter</h3>
+      <p>A multimeter can measure voltage, current, and resistance. It is useful in laboratories and electrical repair work.</p>
+    `,
+
+    "Experiment for Demonstration of Resistance": `
+      <h2>Chapter 7: Current Electricity</h2>
+      <h3>Experiment for Demonstration of Resistance</h3>
+
+      <p>The resistance of a wire can be demonstrated by connecting a wire, cell, ammeter, voltmeter, and switch in a circuit.</p>
+
+      <p>When current flows through the wire, the ammeter measures current and the voltmeter measures potential difference across the wire. The resistance can be calculated using Ohm's law.</p>
+
+      <div class="formula-box">R = V / I</div>
+
+      <h3>What the Experiment Shows</h3>
+      <ul>
+        <li>Increasing length of wire increases resistance.</li>
+        <li>Increasing thickness of wire decreases resistance.</li>
+        <li>Different materials have different resistance.</li>
+        <li>Resistance controls the current in a circuit.</li>
+      </ul>
+
+      <p>This experiment helps understand how electrical devices and circuits control current.</p>
+    `
+  };
+
+  function renderPhysicsFlowChapter67(chapter, contentMap, chapterNumber){
+    const topic = state.selectedTopic || Object.keys(contentMap)[0];
+    const html = contentMap[topic];
+
+    if(!html) return null;
+
+    return `
+      <div class="digital-book-area physics-ch67-flow-area">
+        <div class="digital-book-head">
+          <strong>Physics Digital Book</strong>
+          <span>Chapter ${chapterNumber}</span>
+        </div>
+        <article class="digital-book-text physics-ch67-flow-text">
+          ${html}
+        </article>
+      </div>
+    `;
+  }
+
+  const oldPhysicsRenderCh67Flow = renderDigitalBookContent;
+
+  renderDigitalBookContent = function(chapter){
+    if(state.selectedSubject === "physics" && chapter && chapter.title === "Chapter 6: Electrostatics"){
+      const rendered = renderPhysicsFlowChapter67(chapter, PHYSICS_CH6_CONTENT, 6);
+      if(rendered) return rendered;
+    }
+
+    if(state.selectedSubject === "physics" && chapter && chapter.title === "Chapter 7: Current Electricity"){
+      const rendered = renderPhysicsFlowChapter67(chapter, PHYSICS_CH7_CONTENT, 7);
+      if(rendered) return rendered;
+    }
+
+    return oldPhysicsRenderCh67Flow ? oldPhysicsRenderCh67Flow(chapter) : "";
+  };
+
+  window.PHYSICS_CH6_CONTENT = PHYSICS_CH6_CONTENT;
+  window.PHYSICS_CH7_CONTENT = PHYSICS_CH7_CONTENT;
+})();
+
+// PHYSICS_CHAPTER_8_9_FLOW_CONTENT_V1
+(function(){
+  const PHYSICS_CH8_CONTENT = {
+    "Circuit Elements and Diagram": `
+      <h2>Chapter 8: Electric Circuits</h2>
+      <h3>Circuit Elements and Diagram</h3>
+
+      <p>An electric circuit is a closed path through which electric current flows. A simple circuit usually contains a source of electrical energy, connecting wires, a switch, and an electrical component such as a bulb or resistor.</p>
+
+      <p>Instead of drawing real pictures of components, we use standard symbols in circuit diagrams. These symbols make circuits easier to draw, read, and understand.</p>
+
+      <h3>Common Circuit Elements</h3>
+      <ul>
+        <li><b>Cell:</b> Provides electrical energy.</li>
+        <li><b>Battery:</b> Combination of cells.</li>
+        <li><b>Switch:</b> Opens or closes the circuit.</li>
+        <li><b>Bulb:</b> Converts electrical energy into light and heat.</li>
+        <li><b>Resistor:</b> Controls or limits current.</li>
+        <li><b>Ammeter:</b> Measures current and is connected in series.</li>
+        <li><b>Voltmeter:</b> Measures potential difference and is connected in parallel.</li>
+      </ul>
+
+      <p>A circuit must be closed for current to flow. If the path is broken, current stops flowing.</p>
+    `,
+
+    "Resistors": `
+      <h2>Chapter 8: Electric Circuits</h2>
+      <h3>Resistors</h3>
+
+      <p>A resistor is an electrical component that opposes or limits the flow of electric current in a circuit. Resistance is measured in ohms, represented by the symbol Ω.</p>
+
+      <p>Resistors are used to control current, divide voltage, protect components, and produce heat where needed.</p>
+
+      <h3>Why Resistors Are Used</h3>
+      <ul>
+        <li>To reduce current in a circuit.</li>
+        <li>To protect sensitive components.</li>
+        <li>To control brightness of bulbs or LEDs.</li>
+        <li>To divide voltage in circuits.</li>
+        <li>To produce heat in heaters and irons.</li>
+      </ul>
+
+      <div class="formula-box">R = V / I</div>
+
+      <p>Here, <b>R</b> is resistance, <b>V</b> is potential difference, and <b>I</b> is current.</p>
+    `,
+
+    "Types of Resistors": `
+      <h2>Chapter 8: Electric Circuits</h2>
+      <h3>Types of Resistors</h3>
+
+      <p>Different circuits need different kinds of resistors. Some resistors have fixed resistance, while others can change their resistance.</p>
+
+      <h3>Fixed Resistor</h3>
+      <p>A fixed resistor has a constant resistance value. It is used when a circuit needs a definite resistance.</p>
+
+      <h3>Variable Resistor</h3>
+      <p>A variable resistor allows resistance to be changed. It is used for controlling current, such as in volume controls and dimmer circuits.</p>
+
+      <h3>Thermistor</h3>
+      <p>A thermistor is a resistor whose resistance changes with temperature. It is used in temperature sensors and protection circuits.</p>
+
+      <h3>Light Dependent Resistor</h3>
+      <p>An LDR changes resistance with light intensity. In bright light, its resistance decreases. In darkness, its resistance increases. It is used in automatic street lights and light sensors.</p>
+    `,
+
+    "Combination of Resistors": `
+      <h2>Chapter 8: Electric Circuits</h2>
+      <h3>Combination of Resistors</h3>
+
+      <p>Resistors can be connected in two main ways: series combination and parallel combination.</p>
+
+      <h3>Series Combination</h3>
+      <p>In series, resistors are connected end to end, so the same current passes through each resistor. The total resistance is equal to the sum of all resistances.</p>
+
+      <div class="formula-box">Rs = R1 + R2 + R3</div>
+
+      <p>Series combination increases total resistance. If one component breaks, the whole circuit stops working.</p>
+
+      <h3>Parallel Combination</h3>
+      <p>In parallel, resistors are connected across the same two points, so each resistor has the same potential difference across it. Current divides into different branches.</p>
+
+      <div class="formula-box">1/Rp = 1/R1 + 1/R2 + 1/R3</div>
+
+      <p>Parallel combination decreases total resistance and gives more than one path for current. Household circuits are connected in parallel so appliances can work independently.</p>
+    `,
+
+    "Combination of EMF Sources": `
+      <h2>Chapter 8: Electric Circuits</h2>
+      <h3>Combination of EMF Sources</h3>
+
+      <p>Cells or batteries are sources of EMF. They can be connected in series or parallel depending on the requirement of the circuit.</p>
+
+      <h3>Cells in Series</h3>
+      <p>When cells are connected in series, the positive terminal of one cell is connected to the negative terminal of the next cell. The total EMF increases.</p>
+
+      <p>Series connection is used when higher voltage is required.</p>
+
+      <h3>Cells in Parallel</h3>
+      <p>When cells are connected in parallel, all positive terminals are connected together and all negative terminals are connected together. The voltage remains the same as one cell, but the battery can supply current for a longer time.</p>
+
+      <h3>Use</h3>
+      <ul>
+        <li>Series cells are used in torches and remote controls where more voltage is needed.</li>
+        <li>Parallel cells are useful when longer operation time is needed.</li>
+      </ul>
+    `,
+
+    "Electricity and Its Uses": `
+      <h2>Chapter 8: Electric Circuits</h2>
+      <h3>Electricity and Its Uses</h3>
+
+      <p>Electricity is one of the most important forms of energy in modern life. It can easily be converted into light, heat, sound, motion, and magnetic effects.</p>
+
+      <h3>Daily Life Uses</h3>
+      <ul>
+        <li>Lighting homes, schools, and streets</li>
+        <li>Running fans, motors, and machines</li>
+        <li>Heating in irons, heaters, and ovens</li>
+        <li>Communication through phones, radio, TV, and internet devices</li>
+        <li>Medical equipment and hospital machines</li>
+        <li>Computers and electronic devices</li>
+      </ul>
+
+      <p>Electricity is useful because it can be transmitted over long distances and controlled easily by switches and circuits.</p>
+    `,
+
+    "Electrical Energy": `
+      <h2>Chapter 8: Electric Circuits</h2>
+      <h3>Electrical Energy</h3>
+
+      <p>Electrical energy is the energy used by electrical appliances when current flows through them. The amount of energy used depends on the power of the appliance and the time for which it is used.</p>
+
+      <div class="formula-box">E = Pt</div>
+
+      <p>Here, <b>E</b> is electrical energy, <b>P</b> is power, and <b>t</b> is time.</p>
+
+      <h3>Commercial Unit</h3>
+      <p>The commercial unit of electrical energy is kilowatt-hour, written as kWh. It is commonly called one unit of electricity.</p>
+
+      <div class="formula-box">1 kWh = 3.6 × 10⁶ J</div>
+
+      <p>Electricity bills are calculated using the number of units consumed by appliances.</p>
+    `,
+
+    "Electric Power": `
+      <h2>Chapter 8: Electric Circuits</h2>
+      <h3>Electric Power</h3>
+
+      <p>Electric power is the rate at which electrical energy is used or converted into another form of energy. Its SI unit is watt.</p>
+
+      <div class="formula-box">P = VI</div>
+
+      <p>Here, <b>P</b> is power, <b>V</b> is potential difference, and <b>I</b> is current.</p>
+
+      <h3>Other Forms</h3>
+      <div class="formula-box">P = I²R</div>
+      <div class="formula-box">P = V² / R</div>
+
+      <p>A high-power appliance uses more energy in the same time compared with a low-power appliance.</p>
+
+      <h3>Examples</h3>
+      <ul>
+        <li>A heater has high power because it converts much electrical energy into heat.</li>
+        <li>An LED bulb has low power and uses less energy.</li>
+        <li>The longer an appliance is used, the more energy it consumes.</li>
+      </ul>
+    `,
+
+    "Household Circuits and Electric Safety": `
+      <h2>Chapter 8: Electric Circuits</h2>
+      <h3>Household Circuits and Electric Safety</h3>
+
+      <p>Household circuits are designed to supply electricity safely to different appliances. Appliances in homes are usually connected in parallel so each appliance receives the same voltage and can work independently.</p>
+
+      <h3>Main Wires</h3>
+      <ul>
+        <li><b>Live wire:</b> Carries current from the supply.</li>
+        <li><b>Neutral wire:</b> Completes the circuit.</li>
+        <li><b>Earth wire:</b> Provides safety path for current in case of fault.</li>
+      </ul>
+
+      <h3>Fuse and Circuit Breaker</h3>
+      <p>A fuse or circuit breaker protects the circuit when current becomes too large. A fuse melts and breaks the circuit. A circuit breaker switches off automatically.</p>
+
+      <h3>Safety Rules</h3>
+      <ul>
+        <li>Do not touch switches with wet hands.</li>
+        <li>Do not overload sockets.</li>
+        <li>Use proper insulation on wires.</li>
+        <li>Always use fuses and circuit breakers.</li>
+        <li>Repair damaged wires immediately.</li>
+      </ul>
+    `
+  };
+
+  const PHYSICS_CH9_CONTENT = {
+    "Semiconductors": `
+      <h2>Chapter 9: Electronics</h2>
+      <h3>Semiconductors</h3>
+
+      <p>Semiconductors are materials whose electrical conductivity lies between conductors and insulators. They are very important in modern electronics.</p>
+
+      <p>Silicon and germanium are common semiconductor materials. Their conductivity can be controlled by adding small amounts of impurities. This process is called doping.</p>
+
+      <h3>Important Properties</h3>
+      <ul>
+        <li>They conduct better than insulators but worse than metals.</li>
+        <li>Their conductivity increases with temperature.</li>
+        <li>Their conductivity can be changed by doping.</li>
+        <li>They are used to make diodes, transistors, and integrated circuits.</li>
+      </ul>
+
+      <p>Almost all modern electronic devices depend on semiconductors.</p>
+    `,
+
+    "N and P Type Semiconductors": `
+      <h2>Chapter 9: Electronics</h2>
+      <h3>N and P Type Semiconductors</h3>
+
+      <p>Pure semiconductors are not very useful until impurities are added to them. Adding impurities is called doping. Doping produces two types of semiconductors: N-type and P-type.</p>
+
+      <h3>N-Type Semiconductor</h3>
+      <p>In N-type semiconductors, impurity atoms provide extra electrons. Electrons are the majority charge carriers.</p>
+
+      <h3>P-Type Semiconductor</h3>
+      <p>In P-type semiconductors, impurity atoms create holes. Holes act as positive charge carriers and are the majority carriers.</p>
+
+      <h3>Comparison</h3>
+      <ul>
+        <li>N-type has electrons as majority carriers.</li>
+        <li>P-type has holes as majority carriers.</li>
+        <li>Both are electrically neutral overall.</li>
+        <li>Both are used to make PN junctions and electronic devices.</li>
+      </ul>
+    `,
+
+    "PN Junction": `
+      <h2>Chapter 9: Electronics</h2>
+      <h3>PN Junction</h3>
+
+      <p>A PN junction is formed when P-type and N-type semiconductors are joined together. It is the basic structure of a semiconductor diode.</p>
+
+      <p>At the junction, electrons from the N-side combine with holes from the P-side. This creates a region near the junction that has very few free charge carriers. This region is called the depletion region.</p>
+
+      <h3>Importance</h3>
+      <ul>
+        <li>PN junction allows current mainly in one direction.</li>
+        <li>It is used in diodes.</li>
+        <li>It is the foundation of many electronic devices.</li>
+      </ul>
+
+      <p>The behaviour of a PN junction changes when external voltage is applied. This is called biasing.</p>
+    `,
+
+    "Characteristics of Diode Under Biasing": `
+      <h2>Chapter 9: Electronics</h2>
+      <h3>Characteristics of Diode Under Biasing</h3>
+
+      <p>A diode is based on a PN junction. Its behaviour depends on how it is connected to a battery. This connection is called biasing.</p>
+
+      <h3>Forward Bias</h3>
+      <p>In forward bias, the P-side is connected to the positive terminal and the N-side to the negative terminal. The depletion region becomes thin and current flows easily after a certain voltage.</p>
+
+      <h3>Reverse Bias</h3>
+      <p>In reverse bias, the P-side is connected to the negative terminal and the N-side to the positive terminal. The depletion region becomes wider and current is almost blocked.</p>
+
+      <h3>Diode Action</h3>
+      <p>A diode allows current mainly in one direction. This property is used for rectification, protection, and switching.</p>
+    `,
+
+    "Light Emitting Diode": `
+      <h2>Chapter 9: Electronics</h2>
+      <h3>Light Emitting Diode</h3>
+
+      <p>A light emitting diode, or LED, is a special type of diode that emits light when it is forward biased.</p>
+
+      <p>When electrons and holes recombine inside the LED, energy is released in the form of light.</p>
+
+      <h3>Advantages of LED</h3>
+      <ul>
+        <li>Uses less energy</li>
+        <li>Produces less heat</li>
+        <li>Long life</li>
+        <li>Small size</li>
+        <li>Fast switching</li>
+      </ul>
+
+      <h3>Uses</h3>
+      <ul>
+        <li>Indicator lights</li>
+        <li>Digital displays</li>
+        <li>Traffic signals</li>
+        <li>Remote controls</li>
+        <li>Lighting systems</li>
+      </ul>
+    `,
+
+    "Transistor": `
+      <h2>Chapter 9: Electronics</h2>
+      <h3>Transistor</h3>
+
+      <p>A transistor is a semiconductor device used to amplify signals or act as a switch. It is one of the most important components in electronics.</p>
+
+      <p>A transistor usually has three terminals. In a bipolar transistor, these are emitter, base, and collector.</p>
+
+      <h3>Uses of Transistor</h3>
+      <ul>
+        <li>Amplification of weak signals</li>
+        <li>Switching circuits on and off</li>
+        <li>Digital electronics</li>
+        <li>Computers and mobile phones</li>
+        <li>Radios and amplifiers</li>
+      </ul>
+
+      <p>A small current at the base can control a larger current between collector and emitter.</p>
+    `,
+
+    "Relays and Switching Circuits": `
+      <h2>Chapter 9: Electronics</h2>
+      <h3>Relays and Switching Circuits</h3>
+
+      <p>A relay is an electrically operated switch. It allows a small current circuit to control a larger current circuit.</p>
+
+      <p>A relay usually contains an electromagnet. When current flows through the coil, it magnetizes the core and pulls a contact to open or close another circuit.</p>
+
+      <h3>Uses of Relays</h3>
+      <ul>
+        <li>Automatic switching systems</li>
+        <li>Protection circuits</li>
+        <li>Car electrical systems</li>
+        <li>Control of motors</li>
+        <li>Alarm circuits</li>
+      </ul>
+
+      <p>Relays are useful when low-power control signals need to control high-power devices.</p>
+    `,
+
+    "Transistor as a Switch": `
+      <h2>Chapter 9: Electronics</h2>
+      <h3>Transistor as a Switch</h3>
+
+      <p>A transistor can work as an electronic switch. It can turn a circuit ON or OFF without using a mechanical switch.</p>
+
+      <h3>OFF State</h3>
+      <p>When there is no suitable base current, the transistor does not allow collector current to flow. The circuit is OFF.</p>
+
+      <h3>ON State</h3>
+      <p>When enough base current is applied, the transistor allows current to flow through the collector-emitter path. The circuit is ON.</p>
+
+      <h3>Uses</h3>
+      <ul>
+        <li>Computer circuits</li>
+        <li>Automatic control systems</li>
+        <li>LED control</li>
+        <li>Motor control</li>
+        <li>Digital electronics</li>
+      </ul>
+    `,
+
+    "Digital Electronics": `
+      <h2>Chapter 9: Electronics</h2>
+      <h3>Digital Electronics</h3>
+
+      <p>Digital electronics deals with circuits that use only two states, usually represented by 0 and 1.</p>
+
+      <p>These two states may represent OFF and ON, low and high voltage, or false and true.</p>
+
+      <h3>Why Digital Electronics is Important</h3>
+      <ul>
+        <li>It is used in computers and calculators.</li>
+        <li>It is reliable and accurate.</li>
+        <li>Information can be stored and processed easily.</li>
+        <li>It is used in mobile phones, digital watches, and control systems.</li>
+      </ul>
+
+      <p>Logic gates are the basic building blocks of digital electronics.</p>
+    `,
+
+    "Fundamental Logic Gates": `
+      <h2>Chapter 9: Electronics</h2>
+      <h3>Fundamental Logic Gates</h3>
+
+      <p>Logic gates are electronic circuits that perform logical operations on binary inputs. The fundamental logic gates are AND, OR, and NOT.</p>
+
+      <h3>AND Gate</h3>
+      <p>The AND gate gives output 1 only when all inputs are 1.</p>
+
+      <h3>OR Gate</h3>
+      <p>The OR gate gives output 1 if at least one input is 1.</p>
+
+      <h3>NOT Gate</h3>
+      <p>The NOT gate has one input and gives the opposite output. If input is 1, output is 0. If input is 0, output is 1.</p>
+
+      <h3>Importance</h3>
+      <p>These gates are used to design digital circuits, calculators, computers, and control systems.</p>
+    `,
+
+    "Universal Logic Gates": `
+      <h2>Chapter 9: Electronics</h2>
+      <h3>Universal Logic Gates</h3>
+
+      <p>NAND and NOR gates are called universal logic gates because any logic circuit can be made using only NAND gates or only NOR gates.</p>
+
+      <h3>NAND Gate</h3>
+      <p>A NAND gate is the opposite of an AND gate. It gives output 0 only when all inputs are 1.</p>
+
+      <h3>NOR Gate</h3>
+      <p>A NOR gate is the opposite of an OR gate. It gives output 1 only when all inputs are 0.</p>
+
+      <h3>Why They Are Important</h3>
+      <ul>
+        <li>They can be used to make all other gates.</li>
+        <li>They simplify digital circuit design.</li>
+        <li>They are widely used in integrated circuits.</li>
+      </ul>
+    `,
+
+    "Uses of Logic Gates": `
+      <h2>Chapter 9: Electronics</h2>
+      <h3>Uses of Logic Gates</h3>
+
+      <p>Logic gates are used wherever electronic circuits need to make decisions using binary signals.</p>
+
+      <h3>Applications</h3>
+      <ul>
+        <li>Computers and processors</li>
+        <li>Calculators</li>
+        <li>Digital clocks</li>
+        <li>Automatic control systems</li>
+        <li>Security alarms</li>
+        <li>Traffic light systems</li>
+        <li>Memory circuits</li>
+      </ul>
+
+      <p>Complex digital systems are built by combining many logic gates together.</p>
+    `,
+
+    "Analogue and Digital Electronics": `
+      <h2>Chapter 9: Electronics</h2>
+      <h3>Analogue and Digital Electronics</h3>
+
+      <p>Electronics can be divided into analogue electronics and digital electronics.</p>
+
+      <h3>Analogue Electronics</h3>
+      <p>Analogue signals vary continuously with time. Examples include sound signals from a microphone and temperature signals from sensors.</p>
+
+      <h3>Digital Electronics</h3>
+      <p>Digital signals have fixed levels, usually 0 and 1. Digital systems are used in computers, calculators, and mobile phones.</p>
+
+      <h3>Comparison</h3>
+      <ul>
+        <li>Analogue signals are continuous.</li>
+        <li>Digital signals are discrete.</li>
+        <li>Digital systems are easier to store and process.</li>
+        <li>Analogue systems are useful for natural signals such as sound and light intensity.</li>
+      </ul>
+    `,
+
+    "Quantum Computers": `
+      <h2>Chapter 9: Electronics</h2>
+      <h3>Quantum Computers</h3>
+
+      <p>Quantum computers are advanced computers based on the principles of quantum physics. Unlike classical computers, they use quantum bits called qubits.</p>
+
+      <p>A classical bit can be 0 or 1. A qubit can represent 0, 1, or a combination of both states due to a quantum property called superposition.</p>
+
+      <h3>Why Quantum Computers Matter</h3>
+      <ul>
+        <li>They may solve some complex problems faster than classical computers.</li>
+        <li>They can be useful in cryptography, chemistry, and advanced simulations.</li>
+        <li>They are still developing technology.</li>
+      </ul>
+
+      <p>Quantum computers are an important future direction of electronics and computing.</p>
+    `
+  };
+
+  function renderPhysicsFlowChapter89(chapter, contentMap, chapterNumber){
+    const topic = state.selectedTopic || Object.keys(contentMap)[0];
+    const html = contentMap[topic];
+
+    if(!html) return null;
+
+    return `
+      <div class="digital-book-area physics-ch89-flow-area">
+        <div class="digital-book-head">
+          <strong>Physics Digital Book</strong>
+          <span>Chapter ${chapterNumber}</span>
+        </div>
+        <article class="digital-book-text physics-ch89-flow-text">
+          ${html}
+        </article>
+      </div>
+    `;
+  }
+
+  const oldPhysicsRenderCh89Flow = renderDigitalBookContent;
+
+  renderDigitalBookContent = function(chapter){
+    if(state.selectedSubject === "physics" && chapter && chapter.title === "Chapter 8: Electric Circuits"){
+      const rendered = renderPhysicsFlowChapter89(chapter, PHYSICS_CH8_CONTENT, 8);
+      if(rendered) return rendered;
+    }
+
+    if(state.selectedSubject === "physics" && chapter && chapter.title === "Chapter 9: Electronics"){
+      const rendered = renderPhysicsFlowChapter89(chapter, PHYSICS_CH9_CONTENT, 9);
+      if(rendered) return rendered;
+    }
+
+    return oldPhysicsRenderCh89Flow ? oldPhysicsRenderCh89Flow(chapter) : "";
+  };
+
+  window.PHYSICS_CH8_CONTENT = PHYSICS_CH8_CONTENT;
+  window.PHYSICS_CH9_CONTENT = PHYSICS_CH9_CONTENT;
+})();
+
+// PHYSICS_CHAPTER_10_11_FLOW_CONTENT_V1
+(function(){
+  const PHYSICS_CH10_CONTENT = {
+    "Magnetic Field Due to Current Carrying Wire": `
+      <h2>Chapter 10: Electromagnetism</h2>
+      <h3>Magnetic Field Due to Current Carrying Wire</h3>
+
+      <p>Electromagnetism explains the relationship between electricity and magnetism. When electric current flows through a wire, a magnetic field is produced around the wire.</p>
+
+      <p>The magnetic field around a straight current-carrying wire forms circular field lines. These circles are centred on the wire.</p>
+
+      <h3>Direction of Magnetic Field</h3>
+      <p>The direction of the magnetic field can be found by the right hand rule. If the thumb of the right hand points in the direction of current, the curled fingers show the direction of magnetic field lines.</p>
+
+      <h3>Strength of Magnetic Field</h3>
+      <ul>
+        <li>The magnetic field becomes stronger when current increases.</li>
+        <li>The magnetic field becomes weaker as distance from the wire increases.</li>
+        <li>Reversing current reverses the direction of magnetic field.</li>
+      </ul>
+
+      <p>This effect is the basic idea behind electromagnets, motors, relays, and many electrical devices.</p>
+    `,
+
+    "Magnetic Field Due to Current Carrying Solenoid": `
+      <h2>Chapter 10: Electromagnetism</h2>
+      <h3>Magnetic Field Due to Current Carrying Solenoid</h3>
+
+      <p>A solenoid is a long coil of insulated wire wound in the form of a cylinder. When current passes through a solenoid, it produces a magnetic field.</p>
+
+      <p>The magnetic field of a current-carrying solenoid is similar to the magnetic field of a bar magnet. One end behaves like a north pole and the other end behaves like a south pole.</p>
+
+      <h3>Inside the Solenoid</h3>
+      <p>The magnetic field inside a solenoid is strong and almost uniform. The field lines are close, straight, and parallel inside the coil.</p>
+
+      <h3>Increasing the Magnetic Field</h3>
+      <ul>
+        <li>Increase the current through the solenoid.</li>
+        <li>Increase the number of turns of wire.</li>
+        <li>Place a soft iron core inside the solenoid.</li>
+      </ul>
+
+      <p>Solenoids are used in electromagnets, electric bells, relays, and switching devices.</p>
+    `,
+
+    "Earth's Magnetic Field": `
+      <h2>Chapter 10: Electromagnetism</h2>
+      <h3>Earth's Magnetic Field</h3>
+
+      <p>The Earth behaves like a giant magnet. It has a magnetic field around it, and this field affects magnetic materials and compass needles.</p>
+
+      <p>A freely suspended magnetic needle aligns itself approximately in the north-south direction because of Earth's magnetic field.</p>
+
+      <h3>Magnetic Poles</h3>
+      <p>The geographic north pole and magnetic north pole are not exactly at the same position. This is why compass direction may slightly differ from true geographic north.</p>
+
+      <h3>Importance</h3>
+      <ul>
+        <li>It helps in navigation using a compass.</li>
+        <li>It protects Earth from some charged particles coming from the Sun.</li>
+        <li>It helps birds and some animals during migration.</li>
+      </ul>
+
+      <p>Earth's magnetic field is an important natural example of magnetism.</p>
+    `,
+
+    "Application of Magnetic Effect of Current": `
+      <h2>Chapter 10: Electromagnetism</h2>
+      <h3>Application of Magnetic Effect of Current</h3>
+
+      <p>The magnetic effect of current is used in many electrical and electronic devices. Since current can produce magnetism, we can use electricity to create controlled magnetic fields.</p>
+
+      <h3>Electromagnets</h3>
+      <p>An electromagnet is made by passing current through a coil of wire, usually wound around a soft iron core. It acts like a magnet only when current flows.</p>
+
+      <h3>Applications</h3>
+      <ul>
+        <li>Electric bells</li>
+        <li>Relays</li>
+        <li>Magnetic cranes for lifting iron scrap</li>
+        <li>Loudspeakers</li>
+        <li>Electric motors</li>
+        <li>Magnetic locks</li>
+      </ul>
+
+      <p>The main advantage of an electromagnet is that it can be switched on and off by controlling the current.</p>
+    `,
+
+    "Force On a Current Carrying Conductor Place in a Magnetic Field": `
+      <h2>Chapter 10: Electromagnetism</h2>
+      <h3>Force On a Current Carrying Conductor Placed in a Magnetic Field</h3>
+
+      <p>When a current-carrying conductor is placed in a magnetic field, it experiences a force. This happens because the magnetic field produced by the current interacts with the external magnetic field.</p>
+
+      <div class="formula-box">F = BIL</div>
+
+      <p>Here, <b>F</b> is force, <b>B</b> is magnetic field strength, <b>I</b> is current, and <b>L</b> is length of conductor inside the magnetic field.</p>
+
+      <h3>Direction of Force</h3>
+      <p>The direction of force depends on the direction of current and the direction of magnetic field. Reversing either current or magnetic field reverses the direction of force.</p>
+
+      <h3>Important Use</h3>
+      <p>This force is the working principle of electric motors and moving coil instruments.</p>
+    `,
+
+    "Current Carrying Coil in a Magnetic Field": `
+      <h2>Chapter 10: Electromagnetism</h2>
+      <h3>Current Carrying Coil in a Magnetic Field</h3>
+
+      <p>When a current-carrying coil is placed in a magnetic field, opposite sides of the coil experience forces in opposite directions. These forces produce a turning effect on the coil.</p>
+
+      <p>This turning effect is called torque. It can rotate the coil if the coil is free to move.</p>
+
+      <h3>Why the Coil Rotates</h3>
+      <p>One side of the coil experiences upward force while the other side experiences downward force. These two forces form a couple and rotate the coil.</p>
+
+      <h3>Applications</h3>
+      <ul>
+        <li>Electric motors</li>
+        <li>Galvanometers</li>
+        <li>Moving coil meters</li>
+      </ul>
+
+      <p>The rotation of a current-carrying coil in a magnetic field is a very important idea in electromagnetism.</p>
+    `,
+
+    "Electric Motor": `
+      <h2>Chapter 10: Electromagnetism</h2>
+      <h3>Electric Motor</h3>
+
+      <p>An electric motor is a device that converts electrical energy into mechanical energy. It works on the principle that a current-carrying conductor placed in a magnetic field experiences a force.</p>
+
+      <h3>Main Parts</h3>
+      <ul>
+        <li>Rectangular coil</li>
+        <li>Strong magnet</li>
+        <li>Split-ring commutator</li>
+        <li>Carbon brushes</li>
+        <li>Battery or power supply</li>
+      </ul>
+
+      <h3>Working</h3>
+      <p>When current passes through the coil, the two sides of the coil experience forces in opposite directions. These forces rotate the coil. The split-ring commutator reverses the current direction after every half turn, so the coil keeps rotating in the same direction.</p>
+
+      <h3>Uses</h3>
+      <ul>
+        <li>Fans</li>
+        <li>Washing machines</li>
+        <li>Electric vehicles</li>
+        <li>Pumps</li>
+        <li>Drills and mixers</li>
+      </ul>
+    `,
+
+    "Electromagnetic Induction": `
+      <h2>Chapter 10: Electromagnetism</h2>
+      <h3>Electromagnetic Induction</h3>
+
+      <p>Electromagnetic induction is the production of induced EMF or current in a conductor when the magnetic field linked with it changes.</p>
+
+      <p>If a magnet is moved toward or away from a coil, current is induced in the coil. Similarly, if a coil is moved in a magnetic field, induced current can be produced.</p>
+
+      <h3>How to Increase Induced EMF</h3>
+      <ul>
+        <li>Move the magnet or coil faster.</li>
+        <li>Use a stronger magnet.</li>
+        <li>Increase the number of turns in the coil.</li>
+        <li>Use a soft iron core inside the coil.</li>
+      </ul>
+
+      <p>Electromagnetic induction is the basic principle of electric generators and transformers.</p>
+    `,
+
+    "Lenz's Law": `
+      <h2>Chapter 10: Electromagnetism</h2>
+      <h3>Lenz's Law</h3>
+
+      <p>Lenz's law gives the direction of induced current. It states that the direction of induced current is always such that it opposes the change that produces it.</p>
+
+      <p>This means if a magnet is moved toward a coil, the induced current produces a magnetic field that opposes the approach of the magnet. If the magnet is moved away, the induced current tries to oppose that motion too.</p>
+
+      <h3>Energy Conservation</h3>
+      <p>Lenz's law follows the law of conservation of energy. Work must be done to move the magnet or coil, and this work is converted into electrical energy.</p>
+
+      <h3>Important Point</h3>
+      <p>Lenz's law does not tell the amount of induced current. It tells the direction of induced current.</p>
+    `,
+
+    "Electric Generator": `
+      <h2>Chapter 10: Electromagnetism</h2>
+      <h3>Electric Generator</h3>
+
+      <p>An electric generator is a device that converts mechanical energy into electrical energy. It works on the principle of electromagnetic induction.</p>
+
+      <h3>Main Parts</h3>
+      <ul>
+        <li>Coil of wire</li>
+        <li>Magnet</li>
+        <li>Slip rings or commutator</li>
+        <li>Carbon brushes</li>
+        <li>External circuit</li>
+      </ul>
+
+      <h3>Working</h3>
+      <p>When the coil rotates in a magnetic field, the magnetic field linked with the coil changes continuously. This change induces EMF and current in the coil.</p>
+
+      <h3>Uses</h3>
+      <p>Generators are used in power stations to produce electricity. Mechanical energy may come from steam turbines, water turbines, wind turbines, or engines.</p>
+    `,
+
+    "Transformer": `
+      <h2>Chapter 10: Electromagnetism</h2>
+      <h3>Transformer</h3>
+
+      <p>A transformer is a device used to increase or decrease AC voltage. It works on the principle of mutual induction.</p>
+
+      <p>A transformer has two coils wound on a soft iron core. The input coil is called the primary coil, and the output coil is called the secondary coil.</p>
+
+      <div class="formula-box">Vp / Vs = Np / Ns</div>
+
+      <p>Here, <b>Vp</b> and <b>Vs</b> are primary and secondary voltages, while <b>Np</b> and <b>Ns</b> are number of turns in primary and secondary coils.</p>
+
+      <h3>Types</h3>
+      <ul>
+        <li><b>Step-up transformer:</b> Increases voltage.</li>
+        <li><b>Step-down transformer:</b> Decreases voltage.</li>
+      </ul>
+
+      <p>Transformers are used in power transmission to reduce energy loss.</p>
+    `,
+
+    "Deflection of Electron Beam": `
+      <h2>Chapter 10: Electromagnetism</h2>
+      <h3>Deflection of Electron Beam</h3>
+
+      <p>An electron beam is a stream of fast-moving electrons. Since electrons are negatively charged particles, they can be deflected by electric and magnetic fields.</p>
+
+      <h3>Electric Field Deflection</h3>
+      <p>In an electric field, electrons are attracted toward the positive plate and repelled from the negative plate. This changes the path of the beam.</p>
+
+      <h3>Magnetic Field Deflection</h3>
+      <p>In a magnetic field, moving electrons experience a force perpendicular to their motion and the magnetic field. This also bends the beam.</p>
+
+      <h3>Uses</h3>
+      <ul>
+        <li>Cathode ray oscilloscope</li>
+        <li>Old television picture tubes</li>
+        <li>Electron beam devices</li>
+        <li>Scientific instruments</li>
+      </ul>
+    `,
+
+    "Cathode Ray Oscilloscope": `
+      <h2>Chapter 10: Electromagnetism</h2>
+      <h3>Cathode Ray Oscilloscope</h3>
+
+      <p>A cathode ray oscilloscope, or CRO, is an instrument used to display and study electrical signals. It shows the signal as a waveform on a screen.</p>
+
+      <h3>Main Parts</h3>
+      <ul>
+        <li>Electron gun</li>
+        <li>Deflecting plates</li>
+        <li>Fluorescent screen</li>
+        <li>Control knobs</li>
+      </ul>
+
+      <h3>Working</h3>
+      <p>The electron gun produces a narrow beam of electrons. The beam is deflected by electric fields and strikes the fluorescent screen, producing a bright spot. When the signal changes, the spot moves and forms a waveform.</p>
+
+      <h3>Uses</h3>
+      <ul>
+        <li>Studying waveforms</li>
+        <li>Measuring voltage</li>
+        <li>Measuring time period</li>
+        <li>Measuring frequency</li>
+      </ul>
+    `
+  };
+
+  const PHYSICS_CH11_CONTENT = {
+    "Electromagnetic Spectrum": `
+      <h2>Chapter 11: Electromagnetic Waves</h2>
+      <h3>Electromagnetic Spectrum</h3>
+
+      <p>Electromagnetic waves are waves made of changing electric and magnetic fields. They do not need a material medium and can travel through vacuum.</p>
+
+      <p>The complete range of electromagnetic waves arranged according to wavelength or frequency is called the electromagnetic spectrum.</p>
+
+      <h3>Order of Electromagnetic Spectrum</h3>
+      <ul>
+        <li>Radio waves</li>
+        <li>Microwaves</li>
+        <li>Infrared radiation</li>
+        <li>Visible light</li>
+        <li>Ultraviolet rays</li>
+        <li>X-rays</li>
+        <li>Gamma rays</li>
+      </ul>
+
+      <p>Radio waves have the longest wavelength and lowest frequency. Gamma rays have the shortest wavelength and highest frequency.</p>
+
+      <div class="formula-box">c = fλ</div>
+
+      <p>All electromagnetic waves travel at the speed of light in vacuum.</p>
+    `,
+
+    "Applications of Electromagnetic Waves": `
+      <h2>Chapter 11: Electromagnetic Waves</h2>
+      <h3>Applications of Electromagnetic Waves</h3>
+
+      <p>Different parts of the electromagnetic spectrum have different uses because they have different wavelengths, frequencies, and energies.</p>
+
+      <h3>Uses</h3>
+      <ul>
+        <li><b>Radio waves:</b> Radio, television, and communication.</li>
+        <li><b>Microwaves:</b> Microwave ovens, radar, satellite communication, and mobile phones.</li>
+        <li><b>Infrared:</b> Remote controls, thermal imaging, and heaters.</li>
+        <li><b>Visible light:</b> Vision, photography, and optical instruments.</li>
+        <li><b>Ultraviolet:</b> Sterilization and detection of forged documents.</li>
+        <li><b>X-rays:</b> Medical imaging and security scanning.</li>
+        <li><b>Gamma rays:</b> Cancer treatment and sterilization of medical equipment.</li>
+      </ul>
+
+      <p>Electromagnetic waves are very important in medicine, communication, industry, astronomy, and daily life.</p>
+    `,
+
+    "Risks Associated with Electromagnetic Waves": `
+      <h2>Chapter 11: Electromagnetic Waves</h2>
+      <h3>Risks Associated with Electromagnetic Waves</h3>
+
+      <p>Electromagnetic waves are useful, but some of them can be harmful if exposure is too high. Higher frequency waves have more energy and can damage living tissues.</p>
+
+      <h3>Possible Risks</h3>
+      <ul>
+        <li><b>Ultraviolet rays:</b> Can cause skin burns, eye damage, and skin cancer.</li>
+        <li><b>X-rays:</b> Can damage cells and DNA if exposure is high.</li>
+        <li><b>Gamma rays:</b> Highly penetrating and can cause serious biological damage.</li>
+        <li><b>Microwaves:</b> Can heat body tissues if exposure is intense.</li>
+      </ul>
+
+      <h3>Safety Measures</h3>
+      <ul>
+        <li>Use lead shields during X-ray exposure.</li>
+        <li>Avoid unnecessary exposure to UV radiation.</li>
+        <li>Use protective equipment in radiation areas.</li>
+        <li>Follow safety rules in hospitals and laboratories.</li>
+      </ul>
+
+      <p>Controlled use of electromagnetic waves is safe and useful, but careless exposure can be dangerous.</p>
+    `,
+
+    "Scattering of Light": `
+      <h2>Chapter 11: Electromagnetic Waves</h2>
+      <h3>Scattering of Light</h3>
+
+      <p>Scattering is the spreading of light in different directions when it interacts with small particles or molecules in the atmosphere.</p>
+
+      <p>Sunlight contains different colours. Shorter wavelengths, such as blue and violet, scatter more strongly than longer wavelengths, such as red.</p>
+
+      <h3>Why the Sky is Blue</h3>
+      <p>Blue light is scattered more by air molecules. This scattered blue light reaches our eyes from all directions, so the sky appears blue.</p>
+
+      <h3>Why Sunset is Red</h3>
+      <p>During sunrise and sunset, sunlight travels a longer path through the atmosphere. Most blue light is scattered away, and red/orange light reaches our eyes. This makes the Sun and sky near it appear reddish.</p>
+
+      <p>Scattering of light explains many natural colours in the sky.</p>
+    `,
+
+    "Nature of Light": `
+      <h2>Chapter 11: Electromagnetic Waves</h2>
+      <h3>Nature of Light</h3>
+
+      <p>Light has a dual nature. It behaves both as a wave and as a stream of particles called photons.</p>
+
+      <h3>Wave Nature</h3>
+      <p>Light shows wave behaviour such as reflection, refraction, diffraction, and interference. These phenomena can be explained by treating light as a wave.</p>
+
+      <h3>Particle Nature</h3>
+      <p>Light also behaves like particles called photons. Each photon carries energy.</p>
+
+      <div class="formula-box">E = hf</div>
+
+      <p>Here, <b>E</b> is energy of a photon, <b>h</b> is Planck's constant, and <b>f</b> is frequency.</p>
+
+      <h3>Important Idea</h3>
+      <p>The wave-particle dual nature of light is one of the important ideas of modern physics. It helps explain many experiments and technologies.</p>
+    `
+  };
+
+  function renderPhysicsFlowChapter1011(chapter, contentMap, chapterNumber){
+    const topic = state.selectedTopic || Object.keys(contentMap)[0];
+    const html = contentMap[topic];
+
+    if(!html) return null;
+
+    return `
+      <div class="digital-book-area physics-ch1011-flow-area">
+        <div class="digital-book-head">
+          <strong>Physics Digital Book</strong>
+          <span>Chapter ${chapterNumber}</span>
+        </div>
+        <article class="digital-book-text physics-ch1011-flow-text">
+          ${html}
+        </article>
+      </div>
+    `;
+  }
+
+  const oldPhysicsRenderCh1011Flow = renderDigitalBookContent;
+
+  renderDigitalBookContent = function(chapter){
+    if(state.selectedSubject === "physics" && chapter && chapter.title === "Chapter 10: Electromagnetism"){
+      const rendered = renderPhysicsFlowChapter1011(chapter, PHYSICS_CH10_CONTENT, 10);
+      if(rendered) return rendered;
+    }
+
+    if(state.selectedSubject === "physics" && chapter && chapter.title === "Chapter 11: Electromagnetic Waves"){
+      const rendered = renderPhysicsFlowChapter1011(chapter, PHYSICS_CH11_CONTENT, 11);
+      if(rendered) return rendered;
+    }
+
+    return oldPhysicsRenderCh1011Flow ? oldPhysicsRenderCh1011Flow(chapter) : "";
+  };
+
+  window.PHYSICS_CH10_CONTENT = PHYSICS_CH10_CONTENT;
+  window.PHYSICS_CH11_CONTENT = PHYSICS_CH11_CONTENT;
+})();
+
+// PHYSICS_CHAPTER_12_FLOW_CONTENT_V1
+(function(){
+  const PHYSICS_CH12_CONTENT = {
+    "Discovery of Nucleus": `
+      <h2>Chapter 12: Nuclear Physics</h2>
+      <h3>Discovery of Nucleus</h3>
+
+      <p>Nuclear physics begins with the discovery that an atom is not a solid indivisible sphere. Scientists found that an atom has a tiny central part called the <b>nucleus</b>.</p>
+
+      <p>Rutherford performed the famous gold foil experiment. He directed alpha particles at a very thin gold foil. Most alpha particles passed straight through, some were slightly deflected, and a very few bounced back.</p>
+
+      <h3>Conclusion of Rutherford Experiment</h3>
+      <ul>
+        <li>Most of the atom is empty space.</li>
+        <li>The positive charge of an atom is concentrated in a small nucleus.</li>
+        <li>The nucleus is very dense and contains most of the mass of the atom.</li>
+        <li>Electrons revolve around the nucleus.</li>
+      </ul>
+
+      <p>This experiment changed the model of the atom and introduced the idea of a small, dense, positively charged nucleus.</p>
+    `,
+
+    "Nuclear Representations": `
+      <h2>Chapter 12: Nuclear Physics</h2>
+      <h3>Nuclear Representations</h3>
+
+      <p>Nuclear representation is a way to describe the nucleus of an atom using atomic number and mass number.</p>
+
+      <h3>Atomic Number</h3>
+      <p>The atomic number is the number of protons in the nucleus. It is represented by <b>Z</b>. It identifies the element.</p>
+
+      <h3>Mass Number</h3>
+      <p>The mass number is the total number of protons and neutrons in the nucleus. It is represented by <b>A</b>.</p>
+
+      <div class="formula-box">A = Z + N</div>
+
+      <p>Here, <b>A</b> is mass number, <b>Z</b> is number of protons, and <b>N</b> is number of neutrons.</p>
+
+      <h3>Example</h3>
+      <p>If an atom has 6 protons and 6 neutrons, its atomic number is 6 and mass number is 12.</p>
+    `,
+
+    "Isotopes and Radioisotopes": `
+      <h2>Chapter 12: Nuclear Physics</h2>
+      <h3>Isotopes and Radioisotopes</h3>
+
+      <p>Isotopes are atoms of the same element having the same atomic number but different mass numbers.</p>
+
+      <p>This means isotopes have the same number of protons but different numbers of neutrons.</p>
+
+      <h3>Example</h3>
+      <p>Carbon-12, Carbon-13, and Carbon-14 are isotopes of carbon. They all have 6 protons but different numbers of neutrons.</p>
+
+      <h3>Radioisotopes</h3>
+      <p>Radioisotopes are unstable isotopes that emit radiation from their nuclei. They decay naturally and change into more stable nuclei.</p>
+
+      <h3>Uses of Radioisotopes</h3>
+      <ul>
+        <li>Medical diagnosis and treatment</li>
+        <li>Tracing chemical and biological processes</li>
+        <li>Dating old objects and fossils</li>
+        <li>Industrial testing</li>
+        <li>Agricultural research</li>
+      </ul>
+    `,
+
+    "Radioactivity": `
+      <h2>Chapter 12: Nuclear Physics</h2>
+      <h3>Radioactivity</h3>
+
+      <p>Radioactivity is the spontaneous emission of radiations from unstable nuclei. This process does not need external force or heating. It occurs naturally in unstable atoms.</p>
+
+      <p>Radioactive substances emit radiations to become more stable. The main types of radiations are alpha, beta, and gamma radiations.</p>
+
+      <h3>Alpha Radiation</h3>
+      <p>Alpha particles are heavy and positively charged. They have low penetrating power but strong ionizing ability.</p>
+
+      <h3>Beta Radiation</h3>
+      <p>Beta particles are fast-moving electrons or positrons. They have medium penetrating power and medium ionizing ability.</p>
+
+      <h3>Gamma Radiation</h3>
+      <p>Gamma rays are electromagnetic radiations with very high energy. They have high penetrating power but lower ionizing ability compared with alpha particles.</p>
+    `,
+
+    "Nuclear Decay": `
+      <h2>Chapter 12: Nuclear Physics</h2>
+      <h3>Nuclear Decay</h3>
+
+      <p>Nuclear decay is the process in which an unstable nucleus changes into a more stable nucleus by emitting radiation.</p>
+
+      <p>During nuclear decay, the nucleus may emit alpha particles, beta particles, or gamma rays. The type of radiation depends on the instability of the nucleus.</p>
+
+      <h3>Alpha Decay</h3>
+      <p>In alpha decay, the nucleus emits an alpha particle. The mass number decreases by 4 and atomic number decreases by 2.</p>
+
+      <h3>Beta Decay</h3>
+      <p>In beta decay, a neutron may change into a proton and an electron is emitted. The atomic number changes but mass number remains almost the same.</p>
+
+      <h3>Gamma Decay</h3>
+      <p>In gamma decay, the nucleus releases extra energy in the form of gamma rays. The atomic number and mass number do not change.</p>
+    `,
+
+    "Half-Life": `
+      <h2>Chapter 12: Nuclear Physics</h2>
+      <h3>Half-Life</h3>
+
+      <p>Half-life is the time required for half of the radioactive nuclei in a sample to decay.</p>
+
+      <p>Radioactive decay is random for individual atoms, but for a large sample the rate of decay follows a pattern. After every half-life, the amount of radioactive material becomes half of the previous amount.</p>
+
+      <h3>Example</h3>
+      <p>If a radioactive sample has 100 g and its half-life is 10 years, then after 10 years 50 g will remain. After another 10 years, 25 g will remain.</p>
+
+      <div class="formula-box">N = N₀ / 2ⁿ</div>
+
+      <p>Here, <b>N₀</b> is original amount, <b>N</b> is remaining amount, and <b>n</b> is number of half-lives.</p>
+
+      <h3>Uses of Half-Life</h3>
+      <ul>
+        <li>Dating fossils and rocks</li>
+        <li>Medical radioactive treatment planning</li>
+        <li>Measuring radioactive safety</li>
+        <li>Nuclear research</li>
+      </ul>
+    `,
+
+    "Ionizing Nuclear Radiations": `
+      <h2>Chapter 12: Nuclear Physics</h2>
+      <h3>Ionizing Nuclear Radiations</h3>
+
+      <p>Ionizing radiation is radiation that has enough energy to remove electrons from atoms or molecules. When electrons are removed, ions are formed.</p>
+
+      <p>Alpha, beta, gamma rays, and X-rays can ionize matter. Ionization can be useful in controlled applications but dangerous for living tissues if exposure is high.</p>
+
+      <h3>Effects on Living Cells</h3>
+      <ul>
+        <li>Can damage cells and tissues</li>
+        <li>Can damage DNA</li>
+        <li>Can cause burns or sickness at high exposure</li>
+        <li>Can increase risk of cancer</li>
+      </ul>
+
+      <h3>Protection</h3>
+      <ul>
+        <li>Reduce exposure time</li>
+        <li>Keep safe distance from source</li>
+        <li>Use shielding such as lead or concrete</li>
+        <li>Wear radiation monitoring badges</li>
+      </ul>
+    `,
+
+    "Applications of Radiation": `
+      <h2>Chapter 12: Nuclear Physics</h2>
+      <h3>Applications of Radiation</h3>
+
+      <p>Radiation can be harmful if uncontrolled, but controlled radiation has many useful applications in medicine, industry, agriculture, and research.</p>
+
+      <h3>Medical Uses</h3>
+      <ul>
+        <li>Radiotherapy for cancer treatment</li>
+        <li>Medical imaging</li>
+        <li>Radioactive tracers to study organs</li>
+        <li>Sterilization of medical equipment</li>
+      </ul>
+
+      <h3>Industrial Uses</h3>
+      <ul>
+        <li>Checking thickness of sheets</li>
+        <li>Detecting cracks in metal parts</li>
+        <li>Testing welding joints</li>
+        <li>Detecting leaks in pipelines</li>
+      </ul>
+
+      <h3>Agricultural Uses</h3>
+      <ul>
+        <li>Improving crop varieties</li>
+        <li>Killing pests</li>
+        <li>Preserving food</li>
+      </ul>
+
+      <p>Radiation must always be used carefully with proper safety measures.</p>
+    `,
+
+    "Background Radiation": `
+      <h2>Chapter 12: Nuclear Physics</h2>
+      <h3>Background Radiation</h3>
+
+      <p>Background radiation is the low level of radiation that is always present around us. It comes from natural and artificial sources.</p>
+
+      <h3>Natural Sources</h3>
+      <ul>
+        <li>Cosmic rays from space</li>
+        <li>Radioactive rocks and soil</li>
+        <li>Radon gas</li>
+        <li>Food and water</li>
+        <li>Radioactive materials inside the human body</li>
+      </ul>
+
+      <h3>Artificial Sources</h3>
+      <ul>
+        <li>Medical X-rays</li>
+        <li>Nuclear power stations</li>
+        <li>Industrial radiation sources</li>
+        <li>Fallout from nuclear tests or accidents</li>
+      </ul>
+
+      <p>Background radiation is usually low, but high levels can be dangerous. Radiation monitoring is important for safety.</p>
+    `,
+
+    "Nuclear Fission": `
+      <h2>Chapter 12: Nuclear Physics</h2>
+      <h3>Nuclear Fission</h3>
+
+      <p>Nuclear fission is the splitting of a heavy nucleus into two lighter nuclei with the release of a large amount of energy.</p>
+
+      <p>When a neutron strikes a heavy nucleus such as uranium-235, the nucleus becomes unstable and splits. More neutrons are released, and these neutrons can cause further fission reactions.</p>
+
+      <h3>Chain Reaction</h3>
+      <p>A chain reaction occurs when neutrons produced in one fission reaction cause more fission reactions. If controlled, it is used in nuclear reactors. If uncontrolled, it can cause an explosion.</p>
+
+      <h3>Uses</h3>
+      <ul>
+        <li>Nuclear power generation</li>
+        <li>Nuclear research</li>
+        <li>Production of radioisotopes</li>
+      </ul>
+
+      <p>Nuclear fission releases much more energy than ordinary chemical reactions.</p>
+    `,
+
+    "Nuclear Fusion": `
+      <h2>Chapter 12: Nuclear Physics</h2>
+      <h3>Nuclear Fusion</h3>
+
+      <p>Nuclear fusion is the process in which two light nuclei combine to form a heavier nucleus with the release of a huge amount of energy.</p>
+
+      <p>Fusion requires extremely high temperature and pressure because positively charged nuclei repel each other. At very high temperature, nuclei can come close enough to join.</p>
+
+      <h3>Fusion in the Sun</h3>
+      <p>The Sun and other stars produce energy mainly through nuclear fusion. Hydrogen nuclei combine to form helium and release energy.</p>
+
+      <h3>Importance</h3>
+      <ul>
+        <li>Fusion is the source of energy of stars.</li>
+        <li>It releases enormous energy.</li>
+        <li>It produces less long-lived radioactive waste than fission.</li>
+        <li>Scientists are trying to use fusion for future energy generation.</li>
+      </ul>
+
+      <p>Fusion is difficult to control on Earth, but it has great potential as a future energy source.</p>
+    `,
+
+    "Dark Matter": `
+      <h2>Chapter 12: Nuclear Physics</h2>
+      <h3>Dark Matter</h3>
+
+      <p>Dark matter is a form of matter that does not emit, absorb, or reflect light. Because of this, it cannot be seen directly using ordinary telescopes.</p>
+
+      <p>Scientists know dark matter exists because of its gravitational effects on galaxies and galaxy clusters.</p>
+
+      <h3>Evidence</h3>
+      <ul>
+        <li>Galaxies rotate in a way that cannot be explained by visible matter alone.</li>
+        <li>Gravitational lensing shows extra unseen mass.</li>
+        <li>Motion of galaxies suggests the presence of invisible matter.</li>
+      </ul>
+
+      <p>Dark matter is still one of the major unsolved mysteries in physics. It shows that the universe contains much more than what we can see.</p>
+    `,
+
+    "Falsifiability": `
+      <h2>Chapter 12: Nuclear Physics</h2>
+      <h3>Falsifiability</h3>
+
+      <p>Falsifiability is an important idea in science. A scientific statement or theory must be testable in such a way that it can potentially be proven wrong.</p>
+
+      <p>If an idea cannot be tested or cannot be shown false by any observation, then it is not considered a strong scientific theory.</p>
+
+      <h3>Why It Matters</h3>
+      <ul>
+        <li>It separates science from unsupported claims.</li>
+        <li>It allows theories to be tested by experiments.</li>
+        <li>It helps science improve over time.</li>
+        <li>It makes scientific explanations reliable.</li>
+      </ul>
+
+      <h3>Example</h3>
+      <p>A theory that predicts a measurable result can be tested. If the result does not match the prediction, the theory may need to be changed or rejected.</p>
+
+      <p>Falsifiability is part of the scientific method and helps scientists build better explanations of nature.</p>
+    `
+  };
+
+  function renderPhysicsChapter12Flow(chapter){
+    const topic = state.selectedTopic || "Discovery of Nucleus";
+    const html = PHYSICS_CH12_CONTENT[topic];
+
+    if(!html) return null;
+
+    return `
+      <div class="digital-book-area physics-ch12-flow-area">
+        <div class="digital-book-head">
+          <strong>Physics Digital Book</strong>
+          <span>Chapter 12</span>
+        </div>
+        <article class="digital-book-text physics-ch12-flow-text">
+          ${html}
+        </article>
+      </div>
+    `;
+  }
+
+  const oldPhysicsRenderCh12Flow = renderDigitalBookContent;
+
+  renderDigitalBookContent = function(chapter){
+    if(state.selectedSubject === "physics" && chapter && chapter.title === "Chapter 12: Nuclear Physics"){
+      const rendered = renderPhysicsChapter12Flow(chapter);
+      if(rendered) return rendered;
+    }
+
+    return oldPhysicsRenderCh12Flow ? oldPhysicsRenderCh12Flow(chapter) : "";
+  };
+
+  window.PHYSICS_CH12_CONTENT = PHYSICS_CH12_CONTENT;
+})();

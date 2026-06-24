@@ -1233,3 +1233,123 @@ button{
 .physics-ch3-flow-text ol{
   padding-left:24px;
 }
+
+/* PHYSICS_CHAPTER_4_5_FLOW_STYLE_V1 */
+.physics-ch45-flow-area .digital-book-head{
+  background:linear-gradient(135deg,#0f172a,#2563eb);
+  color:#fff;
+}
+.physics-ch45-flow-text h2{
+  font-size:26px;
+  margin:0 0 8px;
+  color:#0f172a;
+}
+.physics-ch45-flow-text h3{
+  margin-top:20px;
+  color:#1d4ed8;
+}
+.physics-ch45-flow-text p,
+.physics-ch45-flow-text li{
+  line-height:1.8;
+  font-size:15px;
+}
+.physics-ch45-flow-text ul,
+.physics-ch45-flow-text ol{
+  padding-left:24px;
+}
+
+/* PHYSICS_CHAPTER_6_7_FLOW_STYLE_V1 */
+.physics-ch67-flow-area .digital-book-head{
+  background:linear-gradient(135deg,#0f172a,#2563eb);
+  color:#fff;
+}
+.physics-ch67-flow-text h2{
+  font-size:26px;
+  margin:0 0 8px;
+  color:#0f172a;
+}
+.physics-ch67-flow-text h3{
+  margin-top:20px;
+  color:#1d4ed8;
+}
+.physics-ch67-flow-text p,
+.physics-ch67-flow-text li{
+  line-height:1.8;
+  font-size:15px;
+}
+.physics-ch67-flow-text ul,
+.physics-ch67-flow-text ol{
+  padding-left:24px;
+}
+
+/* PHYSICS_CHAPTER_8_9_FLOW_STYLE_V1 */
+.physics-ch89-flow-area .digital-book-head{
+  background:linear-gradient(135deg,#0f172a,#2563eb);
+  color:#fff;
+}
+.physics-ch89-flow-text h2{
+  font-size:26px;
+  margin:0 0 8px;
+  color:#0f172a;
+}
+.physics-ch89-flow-text h3{
+  margin-top:20px;
+  color:#1d4ed8;
+}
+.physics-ch89-flow-text p,
+.physics-ch89-flow-text li{
+  line-height:1.8;
+  font-size:15px;
+}
+.physics-ch89-flow-text ul,
+.physics-ch89-flow-text ol{
+  padding-left:24px;
+}
+
+/* PHYSICS_CHAPTER_10_11_FLOW_STYLE_V1 */
+.physics-ch1011-flow-area .digital-book-head{
+  background:linear-gradient(135deg,#0f172a,#2563eb);
+  color:#fff;
+}
+.physics-ch1011-flow-text h2{
+  font-size:26px;
+  margin:0 0 8px;
+  color:#0f172a;
+}
+.physics-ch1011-flow-text h3{
+  margin-top:20px;
+  color:#1d4ed8;
+}
+.physics-ch1011-flow-text p,
+.physics-ch1011-flow-text li{
+  line-height:1.8;
+  font-size:15px;
+}
+.physics-ch1011-flow-text ul,
+.physics-ch1011-flow-text ol{
+  padding-left:24px;
+}
+
+/* PHYSICS_CHAPTER_12_FLOW_STYLE_V1 */
+.physics-ch12-flow-area .digital-book-head{
+  background:linear-gradient(135deg,#0f172a,#2563eb);
+  color:#fff;
+}
+.physics-ch12-flow-text h2{
+  font-size:26px;
+  margin:0 0 8px;
+  color:#0f172a;
+}
+.physics-ch12-flow-text h3{
+  margin-top:20px;
+  color:#1d4ed8;
+}
+.physics-ch12-flow-text p,
+.physics-ch12-flow-text li{
+  line-height:1.8;
+  font-size:15px;
+}
+.physics-ch12-flow-text ul,
+.physics-ch12-flow-text ol{
+  padding-left:24px;
+}
