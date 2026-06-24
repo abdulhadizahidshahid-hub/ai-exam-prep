@@ -1151,3 +1151,85 @@ button{
 .physics-clean-text ol{
   padding-left:24px;
 }
+
+/* PHYSICS_CHAPTER_1_FLOW_STYLE_V1 */
+.physics-ch1-flow-area .digital-book-head{
+  background:linear-gradient(135deg,#0f172a,#2563eb);
+  color:#fff;
+}
+.physics-ch1-flow-text h2{
+  font-size:26px;
+  margin:0 0 8px;
+  color:#0f172a;
+}
+.physics-ch1-flow-text h3{
+  margin-top:20px;
+  color:#1d4ed8;
+}
+.physics-ch1-flow-text p,
+.physics-ch1-flow-text li{
+  line-height:1.8;
+  font-size:15px;
+}
+.physics-ch1-flow-text ul,
+.physics-ch1-flow-text ol{
+  padding-left:24px;
+}
+.formula-box{
+  display:inline-block;
+  margin:10px 0;
+  padding:10px 16px;
+  border-radius:12px;
+  background:#0f172a;
+  color:#e0f2fe;
+  font-weight:900;
+  font-size:18px;
+}
+
+/* PHYSICS_CHAPTER_2_FLOW_STYLE_V1 */
+.physics-ch2-flow-area .digital-book-head{
+  background:linear-gradient(135deg,#0f172a,#2563eb);
+  color:#fff;
+}
+.physics-ch2-flow-text h2{
+  font-size:26px;
+  margin:0 0 8px;
+  color:#0f172a;
+}
+.physics-ch2-flow-text h3{
+  margin-top:20px;
+  color:#1d4ed8;
+}
+.physics-ch2-flow-text p,
+.physics-ch2-flow-text li{
+  line-height:1.8;
+  font-size:15px;
+}
+.physics-ch2-flow-text ul,
+.physics-ch2-flow-text ol{
+  padding-left:24px;
+}
+
+/* PHYSICS_CHAPTER_3_FLOW_STYLE_V1 */
+.physics-ch3-flow-area .digital-book-head{
+  background:linear-gradient(135deg,#0f172a,#2563eb);
+  color:#fff;
+}
+.physics-ch3-flow-text h2{
+  font-size:26px;
+  margin:0 0 8px;
+  color:#0f172a;
+}
+.physics-ch3-flow-text h3{
+  margin-top:20px;
+  color:#1d4ed8;
+}
+.physics-ch3-flow-text p,
+.physics-ch3-flow-text li{
+  line-height:1.8;
+  font-size:15px;
+}
+.physics-ch3-flow-text ul,
+.physics-ch3-flow-text ol{
+  padding-left:24px;
+}

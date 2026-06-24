@@ -2166,3 +2166,670 @@ function renderPhysicsPdfContentClean(chapter){
 
   window.PDF_PHYSICS_CHAPTERS = PDF_PHYSICS_CHAPTERS;
 })();
+
+// PHYSICS_CHAPTER_1_FLOW_CONTENT_V1
+(function(){
+  const PHYSICS_CH1_CONTENT = {
+    "Specific Heat Capacity": `
+      <h2>Chapter 1: Heat Capacity and Modes of Heat Transfer</h2>
+      <h3>Specific Heat Capacity</h3>
+
+      <p>Heat affects different substances in different ways. Some substances heat up quickly, while others need a large amount of heat before their temperature changes. This difference is explained by <b>specific heat capacity</b>.</p>
+
+      <p><b>Specific heat capacity</b> is the amount of heat absorbed or lost by 1 kg of a substance to change its temperature by 1 kelvin or 1°C.</p>
+
+      <div class="formula-box">c = Q / mΔT</div>
+
+      <p>Here, <b>c</b> is specific heat capacity, <b>Q</b> is heat energy, <b>m</b> is mass, and <b>ΔT</b> is change in temperature. Its SI unit is joule per kilogram per kelvin, written as <b>J kg⁻¹ K⁻¹</b>.</p>
+
+      <p>Metals such as aluminium, copper, iron, and silver usually have low specific heat capacity. They heat up quickly and cool down quickly. Water has a very high specific heat capacity, so it heats up slowly and cools down slowly.</p>
+
+      <h3>Uses of Large Specific Heat of Water</h3>
+      <ul>
+        <li><b>Coastal climate:</b> Water changes temperature slowly, so areas near oceans have moderate temperature compared with inland areas.</li>
+        <li><b>Oceans and lakes:</b> Large water bodies do not heat or cool quickly, which helps aquatic life survive.</li>
+        <li><b>Human body:</b> The human body contains a large amount of water, which helps maintain body temperature.</li>
+        <li><b>Cooling systems:</b> Water is used as coolant in car radiators and industrial systems because it can absorb a large amount of heat.</li>
+        <li><b>Cooking:</b> Water heats food evenly and helps hot drinks stay warm for a longer time.</li>
+      </ul>
+
+      <h3>Measuring Specific Heat Capacity</h3>
+      <p>The specific heat capacity of solids and liquids can be measured by experiments such as the <b>method of mixtures</b> and the <b>electrical heating method</b>.</p>
+
+      <p>In the method of mixtures, a hot solid is placed into water in a calorimeter. Heat lost by the hot solid is gained by the water and calorimeter. Using conservation of energy, the unknown specific heat capacity can be calculated.</p>
+
+      <p>In the electrical heating method, an immersion heater supplies heat to a solid or liquid. The heat supplied and the temperature rise are measured, and the formula <b>c = Q / mΔT</b> is used.</p>
+    `,
+
+    "Transfer of Heat": `
+      <h2>Chapter 1: Heat Capacity and Modes of Heat Transfer</h2>
+      <h3>Transfer of Heat</h3>
+
+      <p>Heat transfer takes place when thermal energy moves from one object or region to another because of a temperature difference. Heat always flows from a hotter body to a colder body until both reach the same temperature. This final condition is called <b>thermal equilibrium</b>.</p>
+
+      <p>There are three main methods of heat transfer:</p>
+
+      <ul>
+        <li><b>Conduction</b></li>
+        <li><b>Convection</b></li>
+        <li><b>Radiation</b></li>
+      </ul>
+
+      <h3>Thermal Conduction</h3>
+      <p>Conduction is the transfer of heat through a substance from its hot part to its cold part without the movement of the substance as a whole. It mainly occurs in solids.</p>
+
+      <p>In metals, heat is transferred quickly because metals have free electrons. These free electrons move through the metal and transfer energy from the hot region to the cold region. This is why metal objects feel hot quickly when heated.</p>
+
+      <p>Materials such as copper and iron are good conductors. Materials such as wood, glass, rubber, and air are poor conductors or insulators.</p>
+
+      <h3>Good and Bad Conductors</h3>
+      <p>An experiment can be performed using different metal rods, wax, drawing pins, and a burner. When one end of each rod is heated, the wax melts and the pins fall. The rod whose pin falls first is the better conductor.</p>
+
+      <h3>Convection</h3>
+      <p>Convection is the transfer of heat by the bulk movement of molecules in liquids and gases. It does not occur in solids.</p>
+
+      <p>When water is heated from below, the lower water becomes hot, expands, and becomes less dense. It rises upward. Cooler, denser water moves downward to take its place. This creates a continuous circular motion called a <b>convection current</b>.</p>
+
+      <p>Convection currents also occur in air and oceans. They help distribute heat and are important for weather, sea breezes, and marine life.</p>
+
+      <h3>Radiation</h3>
+      <p>Radiation is the transfer of heat through electromagnetic waves. Unlike conduction and convection, radiation does not need a material medium. Heat from the Sun reaches Earth mainly by radiation.</p>
+
+      <p>Dark and dull surfaces are good absorbers and emitters of heat radiation. Shiny and light-coloured surfaces are poor absorbers and emitters but good reflectors.</p>
+    `,
+
+    "Applications of Heat Transfer": `
+      <h2>Chapter 1: Heat Capacity and Modes of Heat Transfer</h2>
+      <h3>Applications of Heat Transfer</h3>
+
+      <p>The ideas of conduction, convection, and radiation are used in many daily life and technological applications. Understanding heat transfer helps us design better cooling systems, cooking tools, insulation, buildings, and energy systems.</p>
+
+      <h3>Cooking</h3>
+      <p>In cooking, heat reaches food by conduction through the pan, convection through water or air, and radiation from flames or heating elements. Metals are used in cooking utensils because they conduct heat quickly.</p>
+
+      <h3>Cooling Systems</h3>
+      <p>Water is used in cooling systems because it has high specific heat capacity. It can absorb a large amount of heat without a large rise in temperature. This is why water is used in car radiators and industrial cooling systems.</p>
+
+      <h3>Land and Sea Breezes</h3>
+      <p>Land heats up faster than water during the day. Air over land becomes warm and rises, while cooler air from the sea moves toward land. This produces a sea breeze. At night, land cools faster than sea, and the wind direction can reverse.</p>
+
+      <h3>Marine Life</h3>
+      <p>Convection currents in oceans help move warm and cold water. This movement distributes heat, oxygen, and nutrients. It supports marine life by bringing nutrient-rich water to the surface and helping oxygen reach deeper water.</p>
+
+      <h3>Insulation</h3>
+      <p>Insulators reduce heat transfer. Materials such as wool, rubber, plastic, air, and foam are poor conductors. They are used in winter clothing, building insulation, thermos flasks, and handles of cooking utensils.</p>
+
+      <h3>Radiation in Daily Life</h3>
+      <p>Dark surfaces absorb more radiation and become hotter. Light and shiny surfaces reflect more radiation. This is why light-coloured clothes are preferred in hot weather and shiny surfaces are used in heat reflectors.</p>
+    `,
+
+    "Greenhouse Effect and Global Warming": `
+      <h2>Chapter 1: Heat Capacity and Modes of Heat Transfer</h2>
+      <h3>Greenhouse Effect and Global Warming</h3>
+
+      <p>The Earth receives energy from the Sun mainly in the form of radiation. Some of this energy is absorbed by the Earth's surface, and some is reflected back. The warmed Earth emits infrared radiation.</p>
+
+      <p>Certain gases in the atmosphere, called <b>greenhouse gases</b>, absorb and trap some of this infrared radiation. This process is called the <b>greenhouse effect</b>.</p>
+
+      <p>The greenhouse effect is naturally important because it keeps Earth warm enough for life. Without it, Earth would be much colder.</p>
+
+      <h3>Greenhouse Gases</h3>
+      <ul>
+        <li>Carbon dioxide</li>
+        <li>Methane</li>
+        <li>Water vapour</li>
+        <li>Nitrous oxide</li>
+        <li>Chlorofluorocarbons</li>
+      </ul>
+
+      <h3>Global Warming</h3>
+      <p>When the amount of greenhouse gases increases due to human activities, more heat is trapped in the atmosphere. This causes the average temperature of Earth to rise. This rise in temperature is called <b>global warming</b>.</p>
+
+      <h3>Effects of Global Warming</h3>
+      <ul>
+        <li>Melting of glaciers and polar ice</li>
+        <li>Rise in sea level</li>
+        <li>Extreme weather events</li>
+        <li>Heat waves</li>
+        <li>Changes in rainfall patterns</li>
+        <li>Damage to ecosystems and agriculture</li>
+      </ul>
+
+      <p>Reducing pollution, saving energy, planting trees, and using renewable energy can help control global warming.</p>
+    `,
+
+    "Flow of Heat in Geothermal Activities": `
+      <h2>Chapter 1: Heat Capacity and Modes of Heat Transfer</h2>
+      <h3>Flow of Heat in Geothermal Activities</h3>
+
+      <p>The inside of Earth is very hot. This internal heat is called <b>geothermal heat</b>. It comes from the original formation of Earth and from radioactive decay inside the Earth.</p>
+
+      <p>Heat from inside Earth flows toward the surface. This heat transfer takes place mainly through conduction in solid rocks and convection in molten material under the Earth's crust.</p>
+
+      <h3>Geothermal Activity</h3>
+      <p>When underground water comes into contact with hot rocks, it can become heated and rise to the surface. This produces hot springs and geysers.</p>
+
+      <p>In some regions, molten rock called magma moves under the crust. This movement transfers heat and can lead to volcanic activity.</p>
+
+      <h3>Uses of Geothermal Energy</h3>
+      <ul>
+        <li>Generating electricity</li>
+        <li>Heating buildings</li>
+        <li>Hot water supply</li>
+        <li>Industrial heating</li>
+      </ul>
+
+      <p>Geothermal energy is useful because it is a renewable energy source and can provide heat without burning fossil fuels.</p>
+
+      <h3>Connection with Heat Transfer</h3>
+      <p>Geothermal activity shows all three heat transfer ideas: conduction through rocks, convection in molten material and hot water, and radiation from hot surfaces.</p>
+    `
+  };
+
+  function renderPhysicsChapter1Flow(chapter){
+    const topic = state.selectedTopic || "Specific Heat Capacity";
+    const html = PHYSICS_CH1_CONTENT[topic];
+
+    if(!html) return null;
+
+    return `
+      <div class="digital-book-area physics-ch1-flow-area">
+        <div class="digital-book-head">
+          <strong>Physics Digital Book</strong>
+          <span>Chapter 1</span>
+        </div>
+        <article class="digital-book-text physics-ch1-flow-text">
+          ${html}
+        </article>
+      </div>
+    `;
+  }
+
+  const oldPhysicsRenderCh1Flow = renderDigitalBookContent;
+
+  renderDigitalBookContent = function(chapter){
+    if(state.selectedSubject === "physics" && chapter && chapter.title === "Chapter 1: Heat Capacity and Modes of Heat Transfer"){
+      const rendered = renderPhysicsChapter1Flow(chapter);
+      if(rendered) return rendered;
+    }
+    return oldPhysicsRenderCh1Flow ? oldPhysicsRenderCh1Flow(chapter) : "";
+  };
+
+  window.PHYSICS_CH1_CONTENT = PHYSICS_CH1_CONTENT;
+})();
+
+// PHYSICS_CHAPTER_2_FLOW_CONTENT_V1
+(function(){
+  const PHYSICS_CH2_CONTENT = {
+    "Kinetic Theory of Matter": `
+      <h2>Chapter 2: Thermal Expansion and Change of State</h2>
+      <h3>Kinetic Theory of Matter</h3>
+
+      <p>The kinetic theory of matter explains the behaviour of solids, liquids, and gases by considering the motion of their particles. According to this theory, all matter is made up of tiny particles such as atoms, molecules, or ions.</p>
+
+      <p>These particles are not completely at rest. They are always moving or vibrating. The type and amount of motion depends on the state of matter and its temperature.</p>
+
+      <h3>Particles in Solids</h3>
+      <p>In solids, particles are closely packed and have strong forces of attraction. They cannot move freely from one place to another, but they vibrate about fixed positions. This is why solids have fixed shape and fixed volume.</p>
+
+      <h3>Particles in Liquids</h3>
+      <p>In liquids, particles are still close together but have weaker forces of attraction than solids. They can slide over one another. This is why liquids have fixed volume but no fixed shape.</p>
+
+      <h3>Particles in Gases</h3>
+      <p>In gases, particles are far apart and the forces of attraction between them are very weak. They move freely in all directions and collide with each other and the walls of the container. This is why gases have no fixed shape and no fixed volume.</p>
+
+      <h3>Effect of Heating</h3>
+      <p>When a substance is heated, its particles gain kinetic energy. They move or vibrate faster. This increase in particle motion explains thermal expansion, evaporation, boiling, gas pressure, and change of state.</p>
+    `,
+
+    "Thermal Expansion": `
+      <h2>Chapter 2: Thermal Expansion and Change of State</h2>
+      <h3>Thermal Expansion</h3>
+
+      <p>When most substances are heated, their particles gain kinetic energy and move faster. The particles move slightly farther apart, so the size of the substance increases. This increase in size due to heating is called <b>thermal expansion</b>.</p>
+
+      <p>When the same substance is cooled, its particles lose kinetic energy, move slowly, and come closer together. The size of the substance decreases. This is called contraction.</p>
+
+      <h3>Expansion in Solids</h3>
+      <p>Solids expand when heated and contract when cooled. Since particles in solids are tightly packed, the expansion is usually small but still important in real life.</p>
+
+      <p>Examples include railway tracks, bridges, metal pipes, and overhead wires. Gaps are left in railway tracks and bridges to allow expansion during hot weather.</p>
+
+      <h3>Expansion in Liquids</h3>
+      <p>Liquids also expand when heated. Liquid expansion is used in thermometers, where mercury or alcohol rises in a narrow tube when temperature increases.</p>
+
+      <h3>Expansion in Gases</h3>
+      <p>Gases expand much more than solids and liquids because gas particles are far apart and move freely. When heated, gas particles move faster and occupy more space.</p>
+
+      <h3>Daily Life Importance</h3>
+      <ul>
+        <li>Expansion gaps are left in bridges and railway tracks.</li>
+        <li>Electric wires sag more in summer because they expand.</li>
+        <li>Thermometers work due to expansion of liquid.</li>
+        <li>Hot air balloons rise because heated air expands and becomes less dense.</li>
+      </ul>
+    `,
+
+    "Evaporation": `
+      <h2>Chapter 2: Thermal Expansion and Change of State</h2>
+      <h3>Evaporation</h3>
+
+      <p>Evaporation is the process in which a liquid changes into vapour from its surface at any temperature. Unlike boiling, evaporation does not need the whole liquid to reach its boiling point.</p>
+
+      <p>In a liquid, particles have different kinetic energies. Some particles at the surface have enough energy to escape into the air as vapour. When these high-energy particles leave, the average kinetic energy of the remaining liquid decreases. This causes cooling.</p>
+
+      <h3>Why Evaporation Causes Cooling</h3>
+      <p>When sweat evaporates from our skin, it takes heat from the body. This cools the body. Similarly, water in an earthen pot becomes cool because water slowly evaporates from its surface.</p>
+
+      <h3>Factors Affecting Evaporation</h3>
+      <ul>
+        <li><b>Temperature:</b> Higher temperature increases evaporation.</li>
+        <li><b>Surface area:</b> Larger surface area increases evaporation.</li>
+        <li><b>Wind speed:</b> Moving air removes vapour and increases evaporation.</li>
+        <li><b>Humidity:</b> Less humidity increases evaporation, while high humidity slows it down.</li>
+      </ul>
+
+      <h3>Examples</h3>
+      <ul>
+        <li>Wet clothes dry faster in sunlight.</li>
+        <li>Water kept in a saucer evaporates faster than water kept in a glass.</li>
+        <li>Sweating cools the human body.</li>
+        <li>Perfume spreads because it evaporates easily.</li>
+      </ul>
+    `,
+
+    "Latent Heat": `
+      <h2>Chapter 2: Thermal Expansion and Change of State</h2>
+      <h3>Latent Heat</h3>
+
+      <p>When a substance changes its state, heat is absorbed or released without any change in temperature. This hidden heat is called <b>latent heat</b>.</p>
+
+      <p>For example, when ice melts, it absorbs heat but its temperature remains 0 degree Celsius until all the ice has melted. Similarly, when water boils, it absorbs heat but its temperature remains 100 degree Celsius until all water changes into steam.</p>
+
+      <div class="formula-box">Q = mL</div>
+
+      <p>Here, <b>Q</b> is heat energy, <b>m</b> is mass, and <b>L</b> is latent heat.</p>
+
+      <h3>Latent Heat of Fusion</h3>
+      <p>The heat required to change a solid into liquid at its melting point without change in temperature is called latent heat of fusion.</p>
+
+      <h3>Latent Heat of Vaporization</h3>
+      <p>The heat required to change a liquid into vapour at its boiling point without change in temperature is called latent heat of vaporization.</p>
+
+      <h3>Important Idea</h3>
+      <p>During change of state, heat energy is used to overcome the forces between particles instead of increasing the temperature.</p>
+
+      <h3>Examples</h3>
+      <ul>
+        <li>Ice cools drinks effectively because it absorbs latent heat while melting.</li>
+        <li>Steam can cause severe burns because it releases latent heat when it condenses.</li>
+        <li>Sweating cools the body because evaporation requires heat.</li>
+      </ul>
+    `,
+
+    "Pressure Exerted by Gas Particles": `
+      <h2>Chapter 2: Thermal Expansion and Change of State</h2>
+      <h3>Pressure Exerted by Gas Particles</h3>
+
+      <p>Gas particles are always moving randomly in all directions. They collide with each other and with the walls of their container. These collisions exert force on the walls. The force per unit area is called <b>pressure</b>.</p>
+
+      <div class="formula-box">Pressure = Force / Area</div>
+
+      <p>The pressure of a gas depends on the motion of its particles. If particles move faster or collide more often with the container walls, pressure increases.</p>
+
+      <h3>Effect of Temperature</h3>
+      <p>When a gas is heated, its particles gain kinetic energy and move faster. They collide with the container walls more forcefully and more frequently. If volume remains constant, pressure increases.</p>
+
+      <h3>Effect of Volume</h3>
+      <p>If the volume of a gas is decreased, the particles have less space to move. They collide with the walls more often, so pressure increases.</p>
+
+      <h3>Effect of Number of Particles</h3>
+      <p>If more gas particles are added to a container, more collisions occur with the walls. This increases the gas pressure.</p>
+
+      <h3>Examples</h3>
+      <ul>
+        <li>A balloon expands when more air is added.</li>
+        <li>A tyre becomes harder when more air is pumped into it.</li>
+        <li>Aerosol cans can burst if heated because gas pressure increases.</li>
+        <li>Pressure cookers work because pressure affects boiling and cooking.</li>
+      </ul>
+    `,
+
+    "Superconductivity": `
+      <h2>Chapter 2: Thermal Expansion and Change of State</h2>
+      <h3>Superconductivity</h3>
+
+      <p>Normally, every conductor offers some resistance to the flow of electric current. Due to this resistance, some electrical energy is lost as heat.</p>
+
+      <p>However, some materials show a special behaviour at very low temperatures. Their electrical resistance suddenly becomes almost zero. This phenomenon is called <b>superconductivity</b>.</p>
+
+      <h3>Critical Temperature</h3>
+      <p>The temperature below which a material becomes superconducting is called its <b>critical temperature</b>. Different materials have different critical temperatures.</p>
+
+      <h3>Main Features</h3>
+      <ul>
+        <li>Electrical resistance becomes nearly zero.</li>
+        <li>Current can flow without energy loss.</li>
+        <li>Strong magnetic effects can be produced.</li>
+        <li>Superconductors usually need very low temperatures.</li>
+      </ul>
+
+      <h3>Applications</h3>
+      <ul>
+        <li>MRI machines in hospitals</li>
+        <li>Powerful electromagnets</li>
+        <li>Maglev trains</li>
+        <li>Particle accelerators</li>
+        <li>Future low-loss power transmission systems</li>
+      </ul>
+
+      <p>Superconductivity is important because it can help save energy and produce very strong magnetic fields for modern technology.</p>
+    `
+  };
+
+  function renderPhysicsChapter2Flow(chapter){
+    const topic = state.selectedTopic || "Kinetic Theory of Matter";
+    const html = PHYSICS_CH2_CONTENT[topic];
+
+    if(!html) return null;
+
+    return `
+      <div class="digital-book-area physics-ch2-flow-area">
+        <div class="digital-book-head">
+          <strong>Physics Digital Book</strong>
+          <span>Chapter 2</span>
+        </div>
+        <article class="digital-book-text physics-ch2-flow-text">
+          ${html}
+        </article>
+      </div>
+    `;
+  }
+
+  const oldPhysicsRenderCh2Flow = renderDigitalBookContent;
+
+  renderDigitalBookContent = function(chapter){
+    if(state.selectedSubject === "physics" && chapter && chapter.title === "Chapter 2: Thermal Expansion and Change of State"){
+      const rendered = renderPhysicsChapter2Flow(chapter);
+      if(rendered) return rendered;
+    }
+    return oldPhysicsRenderCh2Flow ? oldPhysicsRenderCh2Flow(chapter) : "";
+  };
+
+  window.PHYSICS_CH2_CONTENT = PHYSICS_CH2_CONTENT;
+})();
+
+// PHYSICS_CHAPTER_3_FLOW_CONTENT_V1
+(function(){
+  const PHYSICS_CH3_CONTENT = {
+    "Wave Motion": `
+      <h2>Chapter 3: Waves</h2>
+      <h3>Wave Motion</h3>
+
+      <p>A wave is a disturbance that transfers energy from one place to another without transferring matter permanently. When a wave moves, particles of the medium may vibrate, but they do not travel with the wave from the source to the final point.</p>
+
+      <p>For example, when a stone is dropped into water, circular ripples move outward. The water particles move up and down, but they do not move outward with the ripples. Energy is transferred through the water.</p>
+
+      <h3>Main Idea</h3>
+      <p>Wave motion is a way of transferring energy. It can occur in water, air, strings, springs, and even through empty space in the case of electromagnetic waves.</p>
+
+      <h3>Examples of Waves</h3>
+      <ul>
+        <li>Water waves on the surface of water</li>
+        <li>Sound waves travelling through air</li>
+        <li>Light waves coming from the Sun</li>
+        <li>Waves on a rope or spring</li>
+        <li>Seismic waves during earthquakes</li>
+      </ul>
+
+      <h3>Important Point</h3>
+      <p>In wave motion, <b>energy moves forward</b>, but the particles of the medium only vibrate about their mean positions.</p>
+    `,
+
+    "Wave Propagation": `
+      <h2>Chapter 3: Waves</h2>
+      <h3>Wave Propagation</h3>
+
+      <p>Wave propagation means the movement or spreading of a wave through a medium or through space. When a disturbance is produced at one point, it passes energy to nearby particles, and the disturbance continues to move forward.</p>
+
+      <p>In a mechanical wave, particles of the medium pass energy to neighbouring particles. This is how sound travels through air and waves travel through water or a string.</p>
+
+      <h3>Mechanical Wave Propagation</h3>
+      <p>Mechanical waves need a material medium. They cannot travel through vacuum. Sound is a mechanical wave, so sound cannot travel in empty space.</p>
+
+      <h3>Electromagnetic Wave Propagation</h3>
+      <p>Electromagnetic waves do not need a material medium. They can travel through vacuum. Light from the Sun reaches Earth through space because light is an electromagnetic wave.</p>
+
+      <h3>Important Examples</h3>
+      <ul>
+        <li>Sound propagates through air by compressions and rarefactions.</li>
+        <li>Water waves propagate through water surface.</li>
+        <li>Light propagates through vacuum and transparent materials.</li>
+      </ul>
+    `,
+
+    "Characteristic Wave Parameters": `
+      <h2>Chapter 3: Waves</h2>
+      <h3>Characteristic Wave Parameters</h3>
+
+      <p>To describe a wave properly, we use some important quantities called wave parameters. These include amplitude, wavelength, frequency, time period, and wave speed.</p>
+
+      <h3>Amplitude</h3>
+      <p>Amplitude is the maximum displacement of a particle from its mean position. A wave with greater amplitude carries more energy.</p>
+
+      <h3>Wavelength</h3>
+      <p>Wavelength is the distance between two consecutive points of a wave that are in the same phase, such as crest to crest or compression to compression. It is represented by the Greek letter lambda, <b>λ</b>.</p>
+
+      <h3>Frequency</h3>
+      <p>Frequency is the number of complete waves passing a point in one second. Its SI unit is hertz, written as <b>Hz</b>.</p>
+
+      <h3>Time Period</h3>
+      <p>Time period is the time taken to complete one vibration or one wave. It is represented by <b>T</b>.</p>
+
+      <div class="formula-box">f = 1 / T</div>
+
+      <h3>Wave Speed</h3>
+      <p>Wave speed is the distance travelled by a wave in one second. It depends on the medium and type of wave.</p>
+
+      <div class="formula-box">v = fλ</div>
+
+      <p>This formula is very important for numerical questions. Here, <b>v</b> is wave speed, <b>f</b> is frequency, and <b>λ</b> is wavelength.</p>
+    `,
+
+    "Waves and their Types": `
+      <h2>Chapter 3: Waves</h2>
+      <h3>Waves and their Types</h3>
+
+      <p>Waves can be classified in different ways. The two most common classifications are based on the need for a medium and based on the direction of particle vibration.</p>
+
+      <h3>On the Basis of Medium</h3>
+      <ul>
+        <li><b>Mechanical waves:</b> These waves need a material medium to travel.</li>
+        <li><b>Electromagnetic waves:</b> These waves do not need a material medium and can travel through vacuum.</li>
+      </ul>
+
+      <h3>On the Basis of Propagation</h3>
+      <ul>
+        <li><b>Transverse waves:</b> Particles vibrate perpendicular to the direction of wave motion.</li>
+        <li><b>Longitudinal waves:</b> Particles vibrate parallel to the direction of wave motion.</li>
+      </ul>
+
+      <h3>Examples</h3>
+      <ul>
+        <li>Water waves are mainly transverse at the surface.</li>
+        <li>Sound waves in air are longitudinal.</li>
+        <li>Light waves are electromagnetic and transverse.</li>
+      </ul>
+
+      <p>Understanding wave types is important because different waves behave differently and are used in different technologies.</p>
+    `,
+
+    "Types of Waves On the Basis of Medium": `
+      <h2>Chapter 3: Waves</h2>
+      <h3>Types of Waves On the Basis of Medium</h3>
+
+      <p>On the basis of medium, waves are divided into two main types: mechanical waves and electromagnetic waves.</p>
+
+      <h3>Mechanical Waves</h3>
+      <p>Mechanical waves need a material medium for propagation. The medium can be solid, liquid, or gas. The particles of the medium vibrate and transfer energy from one point to another.</p>
+
+      <h3>Examples of Mechanical Waves</h3>
+      <ul>
+        <li>Sound waves in air</li>
+        <li>Water waves</li>
+        <li>Waves on a rope</li>
+        <li>Seismic waves</li>
+      </ul>
+
+      <p>Mechanical waves cannot travel through vacuum because there are no particles to transfer the energy.</p>
+
+      <h3>Electromagnetic Waves</h3>
+      <p>Electromagnetic waves do not need a material medium. They can travel through vacuum. They are produced by changing electric and magnetic fields.</p>
+
+      <h3>Examples of Electromagnetic Waves</h3>
+      <ul>
+        <li>Radio waves</li>
+        <li>Microwaves</li>
+        <li>Infrared radiation</li>
+        <li>Visible light</li>
+        <li>Ultraviolet rays</li>
+        <li>X-rays</li>
+        <li>Gamma rays</li>
+      </ul>
+
+      <p>The most common example is sunlight, which reaches Earth through the vacuum of space.</p>
+    `,
+
+    "Types of Waves On the Basis of Propagation": `
+      <h2>Chapter 3: Waves</h2>
+      <h3>Types of Waves On the Basis of Propagation</h3>
+
+      <p>On the basis of the direction in which particles vibrate, waves are divided into transverse waves and longitudinal waves.</p>
+
+      <h3>Transverse Waves</h3>
+      <p>In transverse waves, particles of the medium vibrate perpendicular to the direction of wave propagation.</p>
+
+      <p>A transverse wave has crests and troughs. The highest point is called the crest, and the lowest point is called the trough.</p>
+
+      <h3>Examples of Transverse Waves</h3>
+      <ul>
+        <li>Waves on a stretched string</li>
+        <li>Water surface waves</li>
+        <li>Light waves</li>
+      </ul>
+
+      <h3>Longitudinal Waves</h3>
+      <p>In longitudinal waves, particles of the medium vibrate parallel to the direction of wave propagation.</p>
+
+      <p>A longitudinal wave has compressions and rarefactions. Compression is the region where particles are close together. Rarefaction is the region where particles are spread apart.</p>
+
+      <h3>Examples of Longitudinal Waves</h3>
+      <ul>
+        <li>Sound waves in air</li>
+        <li>Waves in a spring when pushed and pulled</li>
+      </ul>
+
+      <p>Sound waves are one of the most important examples of longitudinal waves.</p>
+    `,
+
+    "Wave Characteristics": `
+      <h2>Chapter 3: Waves</h2>
+      <h3>Wave Characteristics</h3>
+
+      <p>Waves have certain characteristics that help us understand their behaviour. These characteristics include amplitude, wavelength, frequency, time period, and speed.</p>
+
+      <h3>Amplitude and Energy</h3>
+      <p>Amplitude shows how far particles move from their mean position. A larger amplitude means the wave carries more energy.</p>
+
+      <h3>Frequency and Pitch</h3>
+      <p>Frequency is the number of vibrations per second. In sound waves, higher frequency means higher pitch.</p>
+
+      <h3>Wavelength and Wave Speed</h3>
+      <p>Wavelength is the distance between two consecutive similar points of a wave. Wave speed is related to wavelength and frequency.</p>
+
+      <div class="formula-box">v = fλ</div>
+
+      <h3>Phase</h3>
+      <p>Two points on a wave are said to be in the same phase if they are moving in the same way at the same time. For example, two consecutive crests are in the same phase.</p>
+
+      <p>These characteristics allow us to compare different waves and solve numerical problems.</p>
+    `,
+
+    "Properties of Waves": `
+      <h2>Chapter 3: Waves</h2>
+      <h3>Properties of Waves</h3>
+
+      <p>Waves show several important properties when they meet surfaces, enter new media, or pass around obstacles. The main properties are reflection, refraction, diffraction, and interference.</p>
+
+      <h3>Reflection</h3>
+      <p>Reflection is the bouncing back of a wave when it strikes a surface. Echo is an example of reflection of sound.</p>
+
+      <h3>Refraction</h3>
+      <p>Refraction is the bending of a wave when it enters another medium and its speed changes. Light bends when it passes from air into glass or water.</p>
+
+      <h3>Diffraction</h3>
+      <p>Diffraction is the spreading of waves when they pass through a gap or around an obstacle. Sound can be heard around corners because of diffraction.</p>
+
+      <h3>Interference</h3>
+      <p>Interference occurs when two waves meet and combine. They may strengthen or cancel each other depending on how they meet.</p>
+
+      <p>These properties are important in sound, light, water waves, communication, and many technologies.</p>
+    `,
+
+    "Tsunamis": `
+      <h2>Chapter 3: Waves</h2>
+      <h3>Tsunamis</h3>
+
+      <p>A tsunami is a series of very large sea waves caused by a sudden disturbance under the ocean. The most common cause is an underwater earthquake, but tsunamis can also be caused by volcanic eruptions, landslides, or meteor impacts.</p>
+
+      <p>Unlike ordinary sea waves produced by wind, tsunamis carry a huge amount of energy. In deep water, they may not look very high, but they can travel very fast across the ocean.</p>
+
+      <h3>How Tsunamis Form</h3>
+      <p>When the sea floor suddenly moves upward or downward, a large amount of water is displaced. This disturbance creates waves that spread outward in all directions.</p>
+
+      <h3>Near the Coast</h3>
+      <p>As a tsunami approaches shallow water near the coast, its speed decreases but its height increases greatly. This can cause destructive flooding and damage.</p>
+
+      <h3>Safety and Warning</h3>
+      <ul>
+        <li>Move to higher ground if a tsunami warning is issued.</li>
+        <li>Do not go near the shore to watch the waves.</li>
+        <li>After a strong earthquake near the sea, leave coastal areas quickly.</li>
+        <li>Tsunami warning systems help save lives.</li>
+      </ul>
+
+      <p>Tsunamis show how wave energy can travel over very long distances and produce powerful effects.</p>
+    `
+  };
+
+  function renderPhysicsChapter3Flow(chapter){
+    const topic = state.selectedTopic || "Wave Motion";
+    const html = PHYSICS_CH3_CONTENT[topic];
+
+    if(!html) return null;
+
+    return `
+      <div class="digital-book-area physics-ch3-flow-area">
+        <div class="digital-book-head">
+          <strong>Physics Digital Book</strong>
+          <span>Chapter 3</span>
+        </div>
+        <article class="digital-book-text physics-ch3-flow-text">
+          ${html}
+        </article>
+      </div>
+    `;
+  }
+
+  const oldPhysicsRenderCh3Flow = renderDigitalBookContent;
+
+  renderDigitalBookContent = function(chapter){
+    if(state.selectedSubject === "physics" && chapter && chapter.title === "Chapter 3: Waves"){
+      const rendered = renderPhysicsChapter3Flow(chapter);
+      if(rendered) return rendered;
+    }
+    return oldPhysicsRenderCh3Flow ? oldPhysicsRenderCh3Flow(chapter) : "";
+  };
+
+  window.PHYSICS_CH3_CONTENT = PHYSICS_CH3_CONTENT;
+})();
