@@ -4962,3 +4962,75 @@ function renderPhysicsPdfContentClean(chapter){
 
   window.PHYSICS_CH12_CONTENT = PHYSICS_CH12_CONTENT;
 })();
+
+// PHYSICS_EXACT_TEXTBOOK_PDF_VIEW_V1
+(function(){
+  const PHYSICS_PDF_FILE = "physics-textbook.pdf";
+
+  const PHYSICS_PDF_CHAPTERS = {
+    "Chapter 1: Heat Capacity and Modes of Heat Transfer": { unit:"Unit 10", page:11, end:44, exercise:40 },
+    "Chapter 2: Thermal Expansion and Change of State": { unit:"Unit 11", page:45, end:74, exercise:70 },
+    "Chapter 3: Waves": { unit:"Unit 12", page:75, end:92, exercise:88 },
+    "Chapter 4: Sound": { unit:"Unit 13", page:93, end:120, exercise:116 },
+    "Chapter 5: Optics": { unit:"Unit 14", page:121, end:158, exercise:154 },
+    "Chapter 6: Electrostatics": { unit:"Unit 15", page:159, end:184, exercise:180 },
+    "Chapter 7: Current Electricity": { unit:"Unit 16", page:185, end:204, exercise:201 },
+    "Chapter 8: Electric Circuits": { unit:"Unit 17", page:205, end:234, exercise:230 },
+    "Chapter 9: Electronics": { unit:"Unit 18", page:235, end:258, exercise:255 },
+    "Chapter 10: Electromagnetism": { unit:"Unit 19", page:259, end:280, exercise:276 },
+    "Chapter 11: Electromagnetic Waves": { unit:"Unit 20", page:281, end:308, exercise:304 },
+    "Chapter 12: Nuclear Physics": { unit:"Unit 21", page:309, end:364, exercise:345 }
+  };
+
+  function physicsPdfUrl(page){
+    return PHYSICS_PDF_FILE + "#page=" + page + "&view=FitH";
+  }
+
+  function renderExactPhysicsPdf(chapter){
+    const meta = PHYSICS_PDF_CHAPTERS[chapter.title];
+    if(!meta) return null;
+
+    return `
+      <div class="digital-book-area physics-exact-pdf-area">
+        <div class="digital-book-head physics-exact-pdf-head">
+          <strong>Physics Exact Textbook View</strong>
+          <span>${meta.unit} • Pages ${meta.page}-${meta.end}</span>
+        </div>
+
+        <div class="physics-exact-alert">
+          <b>This is the actual textbook chapter.</b>
+          It includes the original examples, exercise questions, tables, diagrams, side information boxes, summaries, and textbook layout.
+          Scroll inside the PDF viewer.
+        </div>
+
+        <div class="physics-pdf-actions">
+          <a href="${physicsPdfUrl(meta.page)}" target="_blank" rel="noopener">Open Chapter Start</a>
+          <a href="${physicsPdfUrl(meta.exercise)}" target="_blank" rel="noopener">Open Exercise Section</a>
+          <a href="${PHYSICS_PDF_FILE}" target="_blank" rel="noopener">Open Full PDF</a>
+        </div>
+
+        <iframe
+          class="physics-exact-pdf-frame"
+          src="${physicsPdfUrl(meta.page)}"
+          title="${chapter.title} Exact Textbook PDF">
+        </iframe>
+
+        <div class="physics-exact-note">
+          If the PDF does not appear here, upload <b>physics-textbook.pdf</b> with <b>app.js</b> and <b>style.css</b> to GitHub.
+        </div>
+      </div>
+    `;
+  }
+
+  const oldPhysicsExactPdfRender = renderDigitalBookContent;
+
+  renderDigitalBookContent = function(chapter){
+    if(state.selectedSubject === "physics" && chapter && PHYSICS_PDF_CHAPTERS[chapter.title]){
+      const exact = renderExactPhysicsPdf(chapter);
+      if(exact) return exact;
+    }
+    return oldPhysicsExactPdfRender ? oldPhysicsExactPdfRender(chapter) : "";
+  };
+
+  window.PHYSICS_PDF_CHAPTERS = PHYSICS_PDF_CHAPTERS;
+})();
