@@ -1,0 +1,19 @@
+﻿{
+  "name": "Prep AI",
+  "short_name": "Prep AI",
+  "description": "AI exam preparation app for classes, subjects, chapters, progress and practice.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f172a",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

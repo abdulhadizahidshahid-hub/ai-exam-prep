@@ -1410,3 +1410,167 @@ button{
   color:#334155;
   font-size:13px;
 }
+
+/* PHYSICS_FULL_EXACT_BOOK_STYLE_V1 */
+.physics-full-exact-area{
+  width:100%;
+}
+.physics-full-exact-head{
+  background:linear-gradient(135deg,#020617,#1d4ed8);
+  color:#fff;
+}
+.physics-full-exact-warning{
+  margin:14px 0;
+  padding:14px 16px;
+  border-radius:14px;
+  background:#eff6ff;
+  border:1px solid #bfdbfe;
+  color:#0f172a;
+  line-height:1.7;
+  font-size:15px;
+}
+.physics-full-exact-toolbar{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:12px 0 14px;
+}
+.physics-full-exact-toolbar button,
+.physics-full-exact-toolbar a{
+  border:0;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 14px;
+  border-radius:12px;
+  background:#0f172a;
+  color:white;
+  text-decoration:none;
+  font-weight:800;
+  font-size:14px;
+  cursor:pointer;
+}
+.physics-full-exact-toolbar button:hover,
+.physics-full-exact-toolbar a:hover{
+  transform:translateY(-1px);
+  box-shadow:0 8px 18px rgba(15,23,42,.18);
+}
+.physics-exact-status{
+  margin:12px 0;
+  padding:10px 12px;
+  border-radius:12px;
+  background:#f8fafc;
+  border:1px dashed #94a3b8;
+  color:#334155;
+  font-size:14px;
+  font-weight:700;
+}
+.physics-exact-pages{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.physics-exact-page-card{
+  width:100%;
+  border:1px solid #cbd5e1;
+  border-radius:16px;
+  background:#f8fafc;
+  padding:10px;
+  box-shadow:0 8px 22px rgba(15,23,42,.08);
+}
+.physics-exact-page-label{
+  font-size:13px;
+  font-weight:900;
+  color:#1e293b;
+  margin-bottom:8px;
+}
+.physics-exact-page-canvas{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:10px;
+  background:#fff;
+}
+.physics-exact-error{
+  padding:16px;
+  border-radius:14px;
+  background:#fee2e2;
+  border:1px solid #fecaca;
+  color:#7f1d1d;
+  font-weight:800;
+}
+
+/* PHYSICS_SPLIT_EXACT_CHAPTER_STYLE_V1 */
+.physics-split-exact-head{
+  background:linear-gradient(135deg,#020617,#1d4ed8);
+  color:#fff;
+}
+.physics-split-exact-alert{
+  margin:14px 0;
+  padding:14px 16px;
+  border-radius:14px;
+  background:#eff6ff;
+  border:1px solid #bfdbfe;
+  color:#0f172a;
+  line-height:1.7;
+  font-size:15px;
+}
+.physics-split-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:12px 0 14px;
+}
+.physics-split-actions a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 14px;
+  border-radius:12px;
+  background:#0f172a;
+  color:white;
+  text-decoration:none;
+  font-weight:800;
+  font-size:14px;
+}
+.physics-split-frame{
+  width:100%;
+  height:78vh;
+  min-height:720px;
+  border:1px solid #cbd5e1;
+  border-radius:16px;
+  background:#fff;
+}
+
+/* PREP_AI_ANDROID_PWA_STYLE_V1 */
+@media (max-width: 768px){
+  body{
+    overscroll-behavior-y:none;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .app,
+  .container,
+  main{
+    max-width:100%;
+  }
+  button,
+  a,
+  input,
+  select{
+    touch-action:manipulation;
+  }
+}
+
+/* PREP_AI_ANDROID_PWA_STYLE_V2 */
+@media (max-width: 768px){
+  body{
+    overscroll-behavior-y:none;
+    -webkit-tap-highlight-color:transparent;
+  }
+  button,
+  a,
+  input,
+  select{
+    touch-action:manipulation;
+  }
+}
