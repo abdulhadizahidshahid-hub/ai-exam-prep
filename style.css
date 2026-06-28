@@ -1835,3 +1835,99 @@ button{
     flex-direction:column;
   }
 }
+
+/* PREP_AI_FAST_AUTH_CONFIG_STYLE_V1 */
+#prepAiFastConfigBtn{
+  position:fixed;
+  right:18px;
+  bottom:78px;
+  z-index:99990;
+  border:0;
+  border-radius:999px;
+  padding:12px 18px;
+  background:#0f172a;
+  color:white;
+  font-weight:900;
+  box-shadow:0 14px 32px rgba(15,23,42,.28);
+  cursor:pointer;
+}
+#prepAiFastConfigScreen{
+  position:fixed;
+  inset:0;
+  z-index:100000;
+}
+.prep-fast-bg{
+  position:absolute;
+  inset:0;
+  background:rgba(15,23,42,.65);
+}
+.prep-fast-panel{
+  position:relative;
+  width:min(520px,calc(100% - 28px));
+  margin:8vh auto;
+  background:white;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 30px 80px rgba(15,23,42,.35);
+}
+.prep-fast-head{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  padding:22px;
+  background:linear-gradient(135deg,#0f172a,#2563eb);
+  color:white;
+}
+.prep-fast-head h2{
+  margin:0 0 6px;
+}
+.prep-fast-head p{
+  margin:0;
+}
+#prepFastClose{
+  width:40px;
+  height:40px;
+  border:0;
+  border-radius:12px;
+  background:rgba(255,255,255,.18);
+  color:white;
+  font-size:26px;
+  cursor:pointer;
+}
+.prep-fast-body{
+  padding:22px;
+}
+.prep-fast-body label{
+  display:block;
+  margin:12px 0 7px;
+  font-weight:900;
+}
+.prep-fast-body input{
+  width:100%;
+  box-sizing:border-box;
+  border:1px solid #cbd5e1;
+  border-radius:13px;
+  padding:13px;
+  font-size:15px;
+}
+.prep-fast-actions{
+  display:flex;
+  gap:10px;
+  padding:0 22px 22px;
+}
+.prep-fast-actions button{
+  flex:1;
+  border:0;
+  border-radius:13px;
+  padding:13px;
+  font-weight:900;
+  cursor:pointer;
+}
+#prepFastSave{
+  background:#2563eb;
+  color:white;
+}
+#prepFastClear{
+  background:#e2e8f0;
+  color:#0f172a;
+}
