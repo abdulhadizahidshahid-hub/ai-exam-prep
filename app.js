@@ -5446,3 +5446,242 @@ function renderPhysicsPdfContentClean(chapter){
 
   runFix();
 })();
+
+// PREP_AI_AUTH_CONFIG_SCREEN_FINAL_V1
+(function(){
+  const API_KEYS = [
+    "prep_ai_api_key",
+    "prepAiApiKey",
+    "OPENAI_API_KEY",
+    "openai_api_key",
+    "ai_api_key"
+  ];
+
+  function visible(el){
+    if(!el) return false;
+    const r = el.getBoundingClientRect();
+    const s = window.getComputedStyle(el);
+    return r.width > 0 && r.height > 0 && s.display !== "none" && s.visibility !== "hidden";
+  }
+
+  function isAuthScreen(){
+    const visiblePassword = Array.from(document.querySelectorAll('input[type="password"]')).some(visible);
+    const text = (document.body.innerText || "").toLowerCase();
+
+    const authWords =
+      text.includes("login") ||
+      text.includes("register") ||
+      text.includes("create account") ||
+      text.includes("username") ||
+      text.includes("password");
+
+    const appWords =
+      text.includes("dashboard") ||
+      text.includes("subjects") ||
+      text.includes("chapters") ||
+      text.includes("digital book") ||
+      text.includes("progress report") ||
+      text.includes("logout");
+
+    return visiblePassword && authWords && !appWords;
+  }
+
+  function getCurrentUser(){
+    const keys = ["prep_ai_current_user","currentUser","loggedInUser","prepAiUser","user"];
+    for(const k of keys){
+      const v = localStorage.getItem(k);
+      if(!v) continue;
+      try{
+        const obj = JSON.parse(v);
+        if(obj.username) return obj.username;
+        if(obj.name) return obj.name;
+        if(obj.fullName) return obj.fullName;
+      }catch(e){
+        return v;
+      }
+    }
+    return "default_user";
+  }
+
+  function userApiKeyName(){
+    return "prep_ai_api_key_for_" + String(getCurrentUser()).replace(/[^a-z0-9_-]/gi,"_");
+  }
+
+  function getApiKey(){
+    return localStorage.getItem(userApiKeyName()) ||
+      API_KEYS.map(k => localStorage.getItem(k)).find(Boolean) ||
+      "";
+  }
+
+  function saveApiKey(value){
+    const key = String(value || "").trim();
+    localStorage.setItem(userApiKeyName(), key);
+    API_KEYS.forEach(k => localStorage.setItem(k, key));
+    window.PREP_AI_API_KEY = key;
+  }
+
+  function getModel(){
+    return localStorage.getItem("prep_ai_model") || "gpt-4o-mini";
+  }
+
+  function saveModel(value){
+    localStorage.setItem("prep_ai_model", String(value || "gpt-4o-mini").trim());
+  }
+
+  function removeConfigureFromAuth(){
+    if(!isAuthScreen()) return;
+
+    Array.from(document.querySelectorAll("button,a")).forEach(el => {
+      const t = (el.innerText || el.textContent || "").trim().toLowerCase();
+
+      if(
+        t === "configure ai" ||
+        t.includes("configure ai") ||
+        t.includes("api key") ||
+        t.includes("ai settings")
+      ){
+        el.remove();
+      }
+    });
+  }
+
+  function removePostLoginButtonIfAuth(){
+    if(!isAuthScreen()) return;
+    const btn = document.getElementById("prepAiAfterLoginConfigBtn");
+    if(btn) btn.remove();
+  }
+
+  function showPostLoginConfigureButton(){
+    if(isAuthScreen()){
+      removePostLoginButtonIfAuth();
+      return;
+    }
+
+    if(document.getElementById("prepAiAfterLoginConfigBtn")) return;
+
+    const btn = document.createElement("button");
+    btn.id = "prepAiAfterLoginConfigBtn";
+    btn.type = "button";
+    btn.innerHTML = "⚙ Configure AI";
+    btn.addEventListener("click", openAiConfigScreen);
+    document.body.appendChild(btn);
+  }
+
+  function openAiConfigScreen(){
+    const old = document.getElementById("prepAiConfigScreen");
+    if(old) old.remove();
+
+    const overlay = document.createElement("div");
+    overlay.id = "prepAiConfigScreen";
+    overlay.innerHTML = `
+      <div class="prep-ai-config-backdrop"></div>
+      <div class="prep-ai-config-panel">
+        <div class="prep-ai-config-header">
+          <div>
+            <h2>Configure AI</h2>
+            <p>Set the AI key for the logged-in user. This key will be used across the whole app.</p>
+          </div>
+          <button type="button" id="prepAiConfigClose">×</button>
+        </div>
+
+        <div class="prep-ai-config-body">
+          <label>API Key</label>
+          <input id="prepAiConfigKeyInput" type="password" placeholder="Paste your OpenAI API key" value="${getApiKey().replace(/"/g,'&quot;')}">
+
+          <label>Model</label>
+          <input id="prepAiConfigModelInput" type="text" placeholder="gpt-4o-mini" value="${getModel().replace(/"/g,'&quot;')}">
+
+          <div class="prep-ai-config-note">
+            This setting is available only after login/register. It is hidden from the login screen.
+          </div>
+        </div>
+
+        <div class="prep-ai-config-actions">
+          <button type="button" id="prepAiSaveConfigBtn">Save AI Settings</button>
+          <button type="button" id="prepAiClearConfigBtn">Clear Key</button>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(overlay);
+
+    document.getElementById("prepAiConfigClose").onclick = () => overlay.remove();
+
+    document.getElementById("prepAiSaveConfigBtn").onclick = () => {
+      const key = document.getElementById("prepAiConfigKeyInput").value;
+      const model = document.getElementById("prepAiConfigModelInput").value;
+
+      saveApiKey(key);
+      saveModel(model);
+
+      alert("AI settings saved for this user.");
+      overlay.remove();
+    };
+
+    document.getElementById("prepAiClearConfigBtn").onclick = () => {
+      saveApiKey("");
+      alert("AI key cleared.");
+      overlay.remove();
+    };
+  }
+
+  function patchFetchForAi(){
+    if(window.__prepAiFetchPatchedFinal) return;
+    window.__prepAiFetchPatchedFinal = true;
+
+    const originalFetch = window.fetch.bind(window);
+
+    window.fetch = function(input, init){
+      const key = getApiKey();
+      const url = typeof input === "string" ? input : input && input.url ? input.url : "";
+
+      if(key && url && (url.includes("/api/") || url.toLowerCase().includes("ai"))){
+        init = init || {};
+        const headers = new Headers(init.headers || {});
+        if(!headers.has("x-openai-api-key")) headers.set("x-openai-api-key", key);
+        if(!headers.has("x-prep-ai-key")) headers.set("x-prep-ai-key", key);
+        if(!headers.has("x-prep-ai-model")) headers.set("x-prep-ai-model", getModel());
+        init.headers = headers;
+      }
+
+      return originalFetch(input, init);
+    };
+  }
+
+  function renameApp(){
+    Array.from(document.querySelectorAll("h1,h2,.title,.app-title")).forEach(el => {
+      if((el.innerText || "").trim() === "AI Exam Prep"){
+        el.innerText = "Prep AI";
+      }
+    });
+    document.title = "Prep AI";
+  }
+
+  function run(){
+    renameApp();
+    removeConfigureFromAuth();
+    removePostLoginButtonIfAuth();
+    showPostLoginConfigureButton();
+  }
+
+  window.getPrepAiApiKey = getApiKey;
+  window.getPrepAiApiConfig = function(){
+    return {
+      apiKey:getApiKey(),
+      model:getModel(),
+      user:getCurrentUser()
+    };
+  };
+
+  patchFetchForAi();
+
+  const observer = new MutationObserver(run);
+  observer.observe(document.documentElement,{childList:true,subtree:true,characterData:true});
+
+  window.addEventListener("load", run);
+  window.addEventListener("hashchange", run);
+  window.addEventListener("storage", run);
+  setInterval(run, 800);
+
+  run();
+})();

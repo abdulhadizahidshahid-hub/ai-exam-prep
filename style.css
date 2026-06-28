@@ -1579,3 +1579,134 @@ button{
 [data-prep-ai-auth-hidden="true"]{
   display:none !important;
 }
+
+/* PREP_AI_AUTH_CONFIG_SCREEN_STYLE_FINAL_V1 */
+#prepAiAfterLoginConfigBtn{
+  position:fixed;
+  right:18px;
+  bottom:78px;
+  z-index:99990;
+  border:0;
+  border-radius:999px;
+  padding:12px 18px;
+  background:#0f172a;
+  color:#fff;
+  font-weight:900;
+  box-shadow:0 14px 32px rgba(15,23,42,.28);
+  cursor:pointer;
+}
+#prepAiAfterLoginConfigBtn:hover{
+  transform:translateY(-1px);
+}
+#prepAiConfigScreen{
+  position:fixed;
+  inset:0;
+  z-index:100000;
+}
+.prep-ai-config-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(15,23,42,.62);
+  backdrop-filter:blur(6px);
+}
+.prep-ai-config-panel{
+  position:relative;
+  width:min(520px,calc(100% - 28px));
+  margin:8vh auto;
+  background:#fff;
+  border-radius:22px;
+  box-shadow:0 30px 80px rgba(15,23,42,.35);
+  overflow:hidden;
+}
+.prep-ai-config-header{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  padding:22px;
+  background:linear-gradient(135deg,#0f172a,#2563eb);
+  color:#fff;
+}
+.prep-ai-config-header h2{
+  margin:0 0 6px;
+  font-size:26px;
+}
+.prep-ai-config-header p{
+  margin:0;
+  line-height:1.5;
+  opacity:.95;
+}
+#prepAiConfigClose{
+  width:40px;
+  height:40px;
+  border:0;
+  border-radius:12px;
+  background:rgba(255,255,255,.18);
+  color:#fff;
+  font-size:26px;
+  cursor:pointer;
+}
+.prep-ai-config-body{
+  padding:22px;
+}
+.prep-ai-config-body label{
+  display:block;
+  margin:12px 0 7px;
+  font-weight:900;
+  color:#0f172a;
+}
+.prep-ai-config-body input{
+  width:100%;
+  box-sizing:border-box;
+  border:1px solid #cbd5e1;
+  border-radius:13px;
+  padding:13px 14px;
+  font-size:15px;
+  outline:none;
+}
+.prep-ai-config-body input:focus{
+  border-color:#2563eb;
+  box-shadow:0 0 0 4px rgba(37,99,235,.12);
+}
+.prep-ai-config-note{
+  margin-top:14px;
+  padding:12px;
+  border-radius:13px;
+  background:#eff6ff;
+  border:1px solid #bfdbfe;
+  color:#1e3a8a;
+  line-height:1.5;
+}
+.prep-ai-config-actions{
+  display:flex;
+  gap:10px;
+  padding:0 22px 22px;
+}
+.prep-ai-config-actions button{
+  flex:1;
+  border:0;
+  border-radius:13px;
+  padding:13px 14px;
+  cursor:pointer;
+  font-weight:900;
+}
+#prepAiSaveConfigBtn{
+  background:#2563eb;
+  color:#fff;
+}
+#prepAiClearConfigBtn{
+  background:#e2e8f0;
+  color:#0f172a;
+}
+@media(max-width:768px){
+  #prepAiAfterLoginConfigBtn{
+    right:14px;
+    bottom:74px;
+    padding:11px 15px;
+  }
+  .prep-ai-config-panel{
+    margin:5vh auto;
+  }
+  .prep-ai-config-actions{
+    flex-direction:column;
+  }
+}
