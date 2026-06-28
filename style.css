@@ -1574,3 +1574,8 @@ button{
     touch-action:manipulation;
   }
 }
+
+/* PREP_AI_HIDE_CONFIG_ON_AUTH_STYLE_V1 */
+[data-prep-ai-auth-hidden="true"]{
+  display:none !important;
+}

@@ -5034,3 +5034,415 @@ function renderPhysicsPdfContentClean(chapter){
 
   window.PHYSICS_PDF_CHAPTERS = PHYSICS_PDF_CHAPTERS;
 })();
+
+// PHYSICS_FULL_EXACT_BOOK_RENDER_V1
+(function(){
+  const PHYSICS_PDF_FILE = "physics-textbook.pdf";
+
+  const EXACT_PHYSICS_CHAPTERS = [
+    {
+      title:"Chapter 1: Heat Capacity and Modes of Heat Transfer",
+      unit:"Unit 10",
+      start:11,
+      end:44,
+      topics:["Full Exact Textbook Chapter","Specific Heat Capacity","Transfer of Heat","Applications of Heat Transfer","Greenhouse Effect and Global Warming","Flow of Heat in Geothermal Activities","Examples / Activities / Tables / Side Boxes","Summary","Exercise"]
+    },
+    {
+      title:"Chapter 2: Thermal Expansion and Change of State",
+      unit:"Unit 11",
+      start:45,
+      end:74,
+      topics:["Full Exact Textbook Chapter","Kinetic Theory of Matter","Thermal Expansion","Evaporation","Latent Heat","Pressure Exerted by Gas Particles","Superconductivity","Examples / Activities / Tables / Side Boxes","Summary","Exercise"]
+    },
+    {
+      title:"Chapter 3: Waves",
+      unit:"Unit 12",
+      start:75,
+      end:92,
+      topics:["Full Exact Textbook Chapter","Wave Motion","Wave Propagation","Characteristic Wave Parameters","Waves and their Types","Types of Waves On the Basis of Medium","Types of Waves On the Basis of Propagation","Wave Characteristics","Properties of Waves","Tsunamis","Examples / Activities / Tables / Side Boxes","Summary","Exercise"]
+    },
+    {
+      title:"Chapter 4: Sound",
+      unit:"Unit 13",
+      start:93,
+      end:120,
+      topics:["Full Exact Textbook Chapter","Source of Sound","Nature of Sound Waves","Ultrasound","Infrasound","Characteristics of Sound Waves","Analysing Sound Waves","Speed of Sound","Noise","Reflection, Refraction and Diffraction of Sound Waves","Echo","Acoustics","Human Hearing System","Examples / Activities / Tables / Side Boxes","Summary","Exercise"]
+    },
+    {
+      title:"Chapter 5: Optics",
+      unit:"Unit 14",
+      start:121,
+      end:158,
+      topics:["Full Exact Textbook Chapter","Reflection of Light","Refraction of Light","Total Internal Reflection","Thin Lenses","Application of Lenses","Visible Spectrum","Human Eye and Colour Perception","Gravitational Lensing","Acoustic Lenses","Examples / Activities / Tables / Side Boxes","Summary","Exercise"]
+    },
+    {
+      title:"Chapter 6: Electrostatics",
+      unit:"Unit 15",
+      start:159,
+      end:184,
+      topics:["Full Exact Textbook Chapter","Static Charge","Conductors and Insulators","Charging and Discharging","Electroscope","Electric Field","Applications of Electrostatics","Electrical Breakdown","Examples / Activities / Tables / Side Boxes","Summary","Exercise"]
+    },
+    {
+      title:"Chapter 7: Current Electricity",
+      unit:"Unit 16",
+      start:185,
+      end:204,
+      topics:["Full Exact Textbook Chapter","Electric Current","Alternating and Direct Current","Potential Difference","EMF","Ohm's Law","Resistance","Resistivity","Electrical Measuring Instruments","Experiment for Demonstration of Resistance","Examples / Activities / Tables / Side Boxes","Summary","Exercise"]
+    },
+    {
+      title:"Chapter 8: Electric Circuits",
+      unit:"Unit 17",
+      start:205,
+      end:234,
+      topics:["Full Exact Textbook Chapter","Circuit Elements and Diagram","Resistors","Types of Resistors","Combination of Resistors","Combination of EMF Sources","Electricity and Its Uses","Electrical Energy","Electric Power","Household Circuits and Electric Safety","Examples / Activities / Tables / Side Boxes","Summary","Exercise"]
+    },
+    {
+      title:"Chapter 9: Electronics",
+      unit:"Unit 18",
+      start:235,
+      end:258,
+      topics:["Full Exact Textbook Chapter","Semiconductors","N and P Type Semiconductors","PN Junction","Characteristics of Diode Under Biasing","Light Emitting Diode","Transistor","Relays and Switching Circuits","Transistor as a Switch","Digital Electronics","Fundamental Logic Gates","Universal Logic Gates","Uses of Logic Gates","Analogue and Digital Electronics","Quantum Computers","Examples / Activities / Tables / Side Boxes","Summary","Exercise"]
+    },
+    {
+      title:"Chapter 10: Electromagnetism",
+      unit:"Unit 19",
+      start:259,
+      end:280,
+      topics:["Full Exact Textbook Chapter","Magnetic Field Due to Current Carrying Wire","Magnetic Field Due to Current Carrying Solenoid","Earth's Magnetic Field","Application of Magnetic Effect of Current","Force On a Current Carrying Conductor Place in a Magnetic Field","Current Carrying Coil in a Magnetic Field","Electric Motor","Electromagnetic Induction","Lenz's Law","Electric Generator","Transformer","Deflection of Electron Beam","Cathode Ray Oscilloscope","Examples / Activities / Tables / Side Boxes","Summary","Exercise"]
+    },
+    {
+      title:"Chapter 11: Electromagnetic Waves",
+      unit:"Unit 20",
+      start:281,
+      end:308,
+      topics:["Full Exact Textbook Chapter","Electromagnetic Spectrum","Applications of Electromagnetic Waves","Risks Associated with Electromagnetic Waves","Scattering of Light","Nature of Light","Examples / Activities / Tables / Side Boxes","Summary","Exercise"]
+    },
+    {
+      title:"Chapter 12: Nuclear Physics",
+      unit:"Unit 21",
+      start:309,
+      end:364,
+      topics:["Full Exact Textbook Chapter","Discovery of Nucleus","Nuclear Representations","Isotopes and Radioisotopes","Radioactivity","Nuclear Decay","Half-Life","Ionizing Nuclear Radiations","Applications of Radiation","Background Radiation","Nuclear Fission","Nuclear Fusion","Dark Matter","Falsifiability","Examples / Activities / Tables / Side Boxes","Summary","Exercise"]
+    }
+  ];
+
+  function applyExactPhysicsChapters(){
+    try{
+      DATA.chapters.physics = EXACT_PHYSICS_CHAPTERS.map(ch => ({
+        title: ch.title,
+        topics: ch.topics
+      }));
+
+      if(!DATA.subjects.some(s => s.id === "physics")){
+        DATA.subjects.push({ id:"physics", title:"Physics", icon:"⚡", active:true });
+      }
+
+      DATA.subjects = DATA.subjects.map(s => s.id === "physics"
+        ? Object.assign({}, s, { title:"Physics", icon:"⚡", active:true })
+        : s
+      );
+    }catch(e){}
+  }
+
+  function getExactPhysicsMeta(title){
+    return EXACT_PHYSICS_CHAPTERS.find(ch => ch.title === title);
+  }
+
+  function loadScriptOnce(src){
+    return new Promise((resolve,reject)=>{
+      const existing=[...document.scripts].find(s => s.src === src);
+      if(existing){
+        resolve();
+        return;
+      }
+      const s=document.createElement("script");
+      s.src=src;
+      s.onload=resolve;
+      s.onerror=reject;
+      document.head.appendChild(s);
+    });
+  }
+
+  async function ensurePdfJs(){
+    if(window.pdfjsLib) return window.pdfjsLib;
+    await loadScriptOnce("https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js");
+    window.pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+    return window.pdfjsLib;
+  }
+
+  async function renderExactPhysicsPages(meta){
+    const root=document.getElementById("physicsExactBookPages");
+    const status=document.getElementById("physicsExactBookStatus");
+    if(!root || !meta) return;
+
+    root.innerHTML="";
+    if(status) status.textContent="Loading exact textbook pages " + meta.start + " to " + meta.end + "...";
+
+    try{
+      const pdfjs=await ensurePdfJs();
+      const pdf=await pdfjs.getDocument(PHYSICS_PDF_FILE).promise;
+
+      const maxPage=Math.min(meta.end, pdf.numPages);
+      const startPage=Math.max(1, meta.start);
+
+      for(let pageNumber=startPage; pageNumber<=maxPage; pageNumber++){
+        if(status) status.textContent="Rendering page " + pageNumber + " of " + maxPage + "...";
+
+        const page=await pdf.getPage(pageNumber);
+        const viewport=page.getViewport({ scale:1.25 });
+
+        const card=document.createElement("div");
+        card.className="physics-exact-page-card";
+        card.id="physics-pdf-page-" + pageNumber;
+
+        const label=document.createElement("div");
+        label.className="physics-exact-page-label";
+        label.textContent=meta.unit + " • PDF Page " + pageNumber;
+
+        const canvas=document.createElement("canvas");
+        const ctx=canvas.getContext("2d");
+        canvas.width=viewport.width;
+        canvas.height=viewport.height;
+        canvas.className="physics-exact-page-canvas";
+
+        card.appendChild(label);
+        card.appendChild(canvas);
+        root.appendChild(card);
+
+        await page.render({ canvasContext:ctx, viewport }).promise;
+      }
+
+      if(status) status.textContent="Exact textbook chapter loaded. All original examples, exercises, tables, diagrams and boxes are shown below.";
+    }catch(err){
+      if(status) status.textContent="Could not load physics-textbook.pdf. Make sure physics-textbook.pdf is uploaded with app.js and style.css.";
+      root.innerHTML='<div class="physics-exact-error">PDF loading failed. Upload <b>physics-textbook.pdf</b> to GitHub root with app.js and style.css.</div>';
+      console.error(err);
+    }
+  }
+
+  function renderExactPhysicsBook(chapter){
+    const meta=getExactPhysicsMeta(chapter.title);
+    if(!meta) return null;
+
+    setTimeout(function(){
+      renderExactPhysicsPages(meta);
+    }, 50);
+
+    return `
+      <div class="digital-book-area physics-full-exact-area">
+        <div class="digital-book-head physics-full-exact-head">
+          <strong>Physics Exact Textbook Content</strong>
+          <span>${meta.unit} • Pages ${meta.start}-${meta.end}</span>
+        </div>
+
+        <div class="physics-full-exact-warning">
+          This view uses the original Physics textbook pages, so nothing is skipped:
+          examples, exercises, MCQs, tables, diagrams, side boxes, summaries and activities are all included exactly from the PDF.
+        </div>
+
+        <div class="physics-full-exact-toolbar">
+          <button type="button" onclick="document.getElementById('physics-pdf-page-${meta.start}')?.scrollIntoView({behavior:'smooth',block:'start'})">Chapter Start</button>
+          <button type="button" onclick="document.getElementById('physics-pdf-page-${Math.max(meta.start, meta.end-4)}')?.scrollIntoView({behavior:'smooth',block:'start'})">Summary / Exercise Area</button>
+          <a href="${PHYSICS_PDF_FILE}#page=${meta.start}" target="_blank" rel="noopener">Open Original PDF</a>
+        </div>
+
+        <div id="physicsExactBookStatus" class="physics-exact-status">Preparing exact textbook pages...</div>
+        <div id="physicsExactBookPages" class="physics-exact-pages"></div>
+      </div>
+    `;
+  }
+
+  applyExactPhysicsChapters();
+
+  const oldFullExactPhysicsRender = renderDigitalBookContent;
+
+  renderDigitalBookContent = function(chapter){
+    if(state.selectedSubject === "physics" && chapter && getExactPhysicsMeta(chapter.title)){
+      const exact=renderExactPhysicsBook(chapter);
+      if(exact) return exact;
+    }
+    return oldFullExactPhysicsRender ? oldFullExactPhysicsRender(chapter) : "";
+  };
+
+  setTimeout(function(){
+    applyExactPhysicsChapters();
+    try{
+      if(state.selectedSubject === "physics" && typeof renderApp === "function"){
+        renderApp();
+      }
+    }catch(e){}
+  }, 200);
+
+  window.EXACT_PHYSICS_CHAPTERS = EXACT_PHYSICS_CHAPTERS;
+})();
+
+// PHYSICS_SPLIT_EXACT_CHAPTER_RENDER_V1
+(function(){
+  const EXACT_PHYSICS_CHAPTERS_SPLIT = [
+    { title:"Chapter 1: Heat Capacity and Modes of Heat Transfer", unit:"Unit 10", file:"physics-ch01.pdf", topics:["Full Exact Textbook Chapter","Specific Heat Capacity","Transfer of Heat","Applications of Heat Transfer","Greenhouse Effect and Global Warming","Flow of Heat in Geothermal Activities","Examples / Activities / Tables / Side Boxes","Summary","Exercise"] },
+    { title:"Chapter 2: Thermal Expansion and Change of State", unit:"Unit 11", file:"physics-ch02.pdf", topics:["Full Exact Textbook Chapter","Kinetic Theory of Matter","Thermal Expansion","Evaporation","Latent Heat","Pressure Exerted by Gas Particles","Superconductivity","Examples / Activities / Tables / Side Boxes","Summary","Exercise"] },
+    { title:"Chapter 3: Waves", unit:"Unit 12", file:"physics-ch03.pdf", topics:["Full Exact Textbook Chapter","Wave Motion","Wave Propagation","Characteristic Wave Parameters","Waves and their Types","Types of Waves On the Basis of Medium","Types of Waves On the Basis of Propagation","Wave Characteristics","Properties of Waves","Tsunamis","Examples / Activities / Tables / Side Boxes","Summary","Exercise"] },
+    { title:"Chapter 4: Sound", unit:"Unit 13", file:"physics-ch04.pdf", topics:["Full Exact Textbook Chapter","Source of Sound","Nature of Sound Waves","Ultrasound","Infrasound","Characteristics of Sound Waves","Analysing Sound Waves","Speed of Sound","Noise","Reflection, Refraction and Diffraction of Sound Waves","Echo","Acoustics","Human Hearing System","Examples / Activities / Tables / Side Boxes","Summary","Exercise"] },
+    { title:"Chapter 5: Optics", unit:"Unit 14", file:"physics-ch05.pdf", topics:["Full Exact Textbook Chapter","Reflection of Light","Refraction of Light","Total Internal Reflection","Thin Lenses","Application of Lenses","Visible Spectrum","Human Eye and Colour Perception","Gravitational Lensing","Acoustic Lenses","Examples / Activities / Tables / Side Boxes","Summary","Exercise"] },
+    { title:"Chapter 6: Electrostatics", unit:"Unit 15", file:"physics-ch06.pdf", topics:["Full Exact Textbook Chapter","Static Charge","Conductors and Insulators","Charging and Discharging","Electroscope","Electric Field","Applications of Electrostatics","Electrical Breakdown","Examples / Activities / Tables / Side Boxes","Summary","Exercise"] },
+    { title:"Chapter 7: Current Electricity", unit:"Unit 16", file:"physics-ch07.pdf", topics:["Full Exact Textbook Chapter","Electric Current","Alternating and Direct Current","Potential Difference","EMF","Ohm's Law","Resistance","Resistivity","Electrical Measuring Instruments","Experiment for Demonstration of Resistance","Examples / Activities / Tables / Side Boxes","Summary","Exercise"] },
+    { title:"Chapter 8: Electric Circuits", unit:"Unit 17", file:"physics-ch08.pdf", topics:["Full Exact Textbook Chapter","Circuit Elements and Diagram","Resistors","Types of Resistors","Combination of Resistors","Combination of EMF Sources","Electricity and Its Uses","Electrical Energy","Electric Power","Household Circuits and Electric Safety","Examples / Activities / Tables / Side Boxes","Summary","Exercise"] },
+    { title:"Chapter 9: Electronics", unit:"Unit 18", file:"physics-ch09.pdf", topics:["Full Exact Textbook Chapter","Semiconductors","N and P Type Semiconductors","PN Junction","Characteristics of Diode Under Biasing","Light Emitting Diode","Transistor","Relays and Switching Circuits","Transistor as a Switch","Digital Electronics","Fundamental Logic Gates","Universal Logic Gates","Uses of Logic Gates","Analogue and Digital Electronics","Quantum Computers","Examples / Activities / Tables / Side Boxes","Summary","Exercise"] },
+    { title:"Chapter 10: Electromagnetism", unit:"Unit 19", file:"physics-ch10.pdf", topics:["Full Exact Textbook Chapter","Magnetic Field Due to Current Carrying Wire","Magnetic Field Due to Current Carrying Solenoid","Earth's Magnetic Field","Application of Magnetic Effect of Current","Force On a Current Carrying Conductor Place in a Magnetic Field","Current Carrying Coil in a Magnetic Field","Electric Motor","Electromagnetic Induction","Lenz's Law","Electric Generator","Transformer","Deflection of Electron Beam","Cathode Ray Oscilloscope","Examples / Activities / Tables / Side Boxes","Summary","Exercise"] },
+    { title:"Chapter 11: Electromagnetic Waves", unit:"Unit 20", file:"physics-ch11.pdf", topics:["Full Exact Textbook Chapter","Electromagnetic Spectrum","Applications of Electromagnetic Waves","Risks Associated with Electromagnetic Waves","Scattering of Light","Nature of Light","Examples / Activities / Tables / Side Boxes","Summary","Exercise"] },
+    { title:"Chapter 12: Nuclear Physics", unit:"Unit 21", file:"physics-ch12.pdf", topics:["Full Exact Textbook Chapter","Discovery of Nucleus","Nuclear Representations","Isotopes and Radioisotopes","Radioactivity","Nuclear Decay","Half-Life","Ionizing Nuclear Radiations","Applications of Radiation","Background Radiation","Nuclear Fission","Nuclear Fusion","Dark Matter","Falsifiability","Examples / Activities / Tables / Side Boxes","Summary","Exercise"] }
+  ];
+
+  function applySplitPhysics(){
+    try{
+      DATA.chapters.physics = EXACT_PHYSICS_CHAPTERS_SPLIT.map(c => ({ title:c.title, topics:c.topics }));
+      if(!DATA.subjects.some(s => s.id === "physics")){
+        DATA.subjects.push({ id:"physics", title:"Physics", icon:"⚡", active:true });
+      }
+    }catch(e){}
+  }
+
+  function getSplitMeta(title){
+    return EXACT_PHYSICS_CHAPTERS_SPLIT.find(c => c.title === title);
+  }
+
+  function renderSplitExactPhysics(chapter){
+    const meta = getSplitMeta(chapter.title);
+    if(!meta) return null;
+
+    return `
+      <div class="digital-book-area physics-split-exact-area">
+        <div class="digital-book-head physics-split-exact-head">
+          <strong>Physics Exact Textbook</strong>
+          <span>${meta.unit} • ${meta.file}</span>
+        </div>
+
+        <div class="physics-split-exact-alert">
+          This is the exact chapter PDF split from the textbook, so examples, exercises, MCQs, tables, diagrams, side boxes, summaries and activities are included.
+        </div>
+
+        <div class="physics-split-actions">
+          <a href="${meta.file}" target="_blank" rel="noopener">Open Chapter PDF</a>
+        </div>
+
+        <iframe class="physics-split-frame" src="${meta.file}#view=FitH" title="${chapter.title}"></iframe>
+      </div>
+    `;
+  }
+
+  applySplitPhysics();
+
+  const oldSplitPhysicsRender = renderDigitalBookContent;
+  renderDigitalBookContent = function(chapter){
+    if(state.selectedSubject === "physics" && chapter && getSplitMeta(chapter.title)){
+      const exact = renderSplitExactPhysics(chapter);
+      if(exact) return exact;
+    }
+    return oldSplitPhysicsRender ? oldSplitPhysicsRender(chapter) : "";
+  };
+
+  setTimeout(function(){
+    applySplitPhysics();
+    try{ if(state.selectedSubject === "physics" && typeof renderApp === "function") renderApp(); }catch(e){}
+  }, 200);
+
+  window.EXACT_PHYSICS_CHAPTERS_SPLIT = EXACT_PHYSICS_CHAPTERS_SPLIT;
+})();
+
+// PREP_AI_HIDE_CONFIG_ON_AUTH_V1
+(function(){
+  function isAuthScreen(){
+    const bodyText = (document.body.innerText || "").toLowerCase();
+    const hasPassword = !!document.querySelector('input[type="password"]');
+    const hasLoginRegisterText =
+      bodyText.includes("login") ||
+      bodyText.includes("log in") ||
+      bodyText.includes("register") ||
+      bodyText.includes("sign up") ||
+      bodyText.includes("create account");
+
+    const hasAppWorkspace =
+      bodyText.includes("dashboard") ||
+      bodyText.includes("subjects") ||
+      bodyText.includes("chapters") ||
+      bodyText.includes("progress") ||
+      bodyText.includes("digital book");
+
+    return hasPassword && hasLoginRegisterText && !hasAppWorkspace;
+  }
+
+  function hideAiConfigOnAuth(){
+    const auth = isAuthScreen();
+
+    document.querySelectorAll("button,a,div,section,aside,article").forEach(function(el){
+      const txt = (el.innerText || el.textContent || "").trim().toLowerCase();
+
+      const isAiConfig =
+        txt === "configure ai" ||
+        txt.includes("configure ai") ||
+        txt.includes("api key") ||
+        txt.includes("openai key") ||
+        txt.includes("ai settings");
+
+      if(!isAiConfig) return;
+
+      const target =
+        el.closest(".card") ||
+        el.closest(".panel") ||
+        el.closest(".settings") ||
+        el.closest(".ai-config") ||
+        el.closest("section") ||
+        el;
+
+      if(auth){
+        target.setAttribute("data-prep-ai-auth-hidden", "true");
+        target.style.display = "none";
+      }else{
+        if(target.getAttribute("data-prep-ai-auth-hidden") === "true"){
+          target.style.display = "";
+          target.removeAttribute("data-prep-ai-auth-hidden");
+        }
+      }
+    });
+  }
+
+  function protectConfigureAiClick(){
+    document.addEventListener("click", function(e){
+      const btn = e.target.closest("button,a");
+      if(!btn) return;
+
+      const txt = (btn.innerText || btn.textContent || "").trim().toLowerCase();
+
+      if(txt.includes("configure ai") || txt.includes("api key") || txt.includes("ai settings")){
+        if(isAuthScreen()){
+          e.preventDefault();
+          e.stopPropagation();
+          alert("Please login or register first. AI configuration is available after login.");
+          return false;
+        }
+      }
+    }, true);
+  }
+
+  function runFix(){
+    hideAiConfigOnAuth();
+    setTimeout(hideAiConfigOnAuth, 100);
+    setTimeout(hideAiConfigOnAuth, 500);
+    setTimeout(hideAiConfigOnAuth, 1000);
+  }
+
+  protectConfigureAiClick();
+
+  const observer = new MutationObserver(runFix);
+  observer.observe(document.documentElement, {
+    childList:true,
+    subtree:true,
+    characterData:true
+  });
+
+  window.addEventListener("load", runFix);
+  window.addEventListener("hashchange", runFix);
+  window.addEventListener("storage", runFix);
+
+  runFix();
+})();
